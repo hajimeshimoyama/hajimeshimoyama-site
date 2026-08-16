@@ -16,3 +16,5 @@ images:
   - /images/works/the-tree-for-discover/08.jpg
 oldPath: /17
 ---
+
+園児たちとのワークショップから生まれた作品。「第76回新制作展」（国立新美術館）にも展示された。

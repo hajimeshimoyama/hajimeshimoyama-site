@@ -4,9 +4,13 @@ titleEn: "Celosia Cube"
 year: 2015
 category: exhibition
 venue: "第79回新制作展　国立新美術館\n上賀茂・千年アート展\n東京都・京都府"
+materials: スチール焼付塗装仕上
+size: H1100×W1300×D1100
 coverImage: /images/works/celosia-cube/cover.jpg
 images:
   - /images/works/celosia-cube/01.jpg
   - /images/works/celosia-cube/02.jpg
 oldPath: /invalid
 ---
+
+地域活性とアートの関係性を探る研究の一環として、製造業共同体「高崎Art製造Projectカロエ」とのコラボレーションによる作品化。紙のように軽やかでシンプルな一筆書きの「花」一輪のイメージを、一枚の板から制作されたように見える、複雑に入り組んだ形状として表現した。新制作展での出展後、上賀茂神社境内という重厚で複雑な歴史的空間に配置し、環境とのコントラストによって生まれる調和も表現している。

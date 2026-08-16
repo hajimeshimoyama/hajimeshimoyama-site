@@ -12,3 +12,5 @@ images:
   - /images/works/designing-a-entrance-garden-for-the-ltd/04.jpg
 oldPath: /k-1
 ---
+
+岐阜県に新築された民間企業新社屋の外構部に、企業の歴史・記憶を象徴するランドスケープをデザイン。計画地内に旧社屋の外形形状を模したラインを石で埋設し、その間をグランドカバーと樹木にて調和させた。
