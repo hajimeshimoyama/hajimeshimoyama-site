@@ -16,6 +16,8 @@ const works = defineCollection({
     // public/images 配下への相対パス（Phase 2で実素材に差し替え）
     coverImage: z.string(),
     images: z.array(z.string()).default([]),
+    // public/videos 配下への相対パス
+    video: z.string().optional(),
     // Phase 4 で旧サイトの自動生成URL（例: /z）から新URLへ301リダイレクトするための対応表に使う
     oldPath: z.string().optional(),
     // トップページでの並び順。省略時は year の降順。

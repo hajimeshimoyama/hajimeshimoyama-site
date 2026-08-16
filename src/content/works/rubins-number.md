@@ -11,6 +11,7 @@ images:
   - /images/works/rubins-number/01.jpg
   - /images/works/rubins-number/02.jpg
   - /images/works/rubins-number/03.jpg
+video: /videos/works/rubins-number/video.mp4
 oldPath: /13
 ---
 

@@ -9,6 +9,7 @@ size: W100×H100×D20cm
 coverImage: /images/works/pillars-of-compassin/cover.jpg
 images:
   - /images/works/pillars-of-compassin/01.jpg
+video: /videos/works/pillars-of-compassin/video.mp4
 oldPath: /11
 ---
 

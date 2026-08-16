@@ -11,7 +11,7 @@ export async function getStaticPaths() {
 }
 
 const { work } = Astro.props;
-const { title, titleEn, year, venue, period, materials, size, images, coverImage } = work.data;
+const { title, titleEn, year, venue, period, materials, size, images, coverImage, video } = work.data;
 const gallery = images.length > 0 ? images : [coverImage];
 const { Content } = await render(work);
 ---
@@ -31,6 +31,12 @@ const { Content } = await render(work);
         <img src={src} alt={title} loading="lazy" />
       ))}
     </div>
+
+    {video && (
+      <div class="work-detail__video">
+        <video src={video} controls playsinline preload="metadata"></video>
+      </div>
+    )}
 
     {(materials || size) && (
       <dl class="work-detail__specs">
@@ -103,6 +109,16 @@ const { Content } = await render(work);
   .work-detail__gallery img {
     width: 100%;
     object-fit: cover;
+  }
+
+  .work-detail__video {
+    margin-bottom: clamp(2rem, 5vw, 3.5rem);
+  }
+
+  .work-detail__video video {
+    display: block;
+    width: 100%;
+    background: var(--color-border);
   }
 
   .work-detail__specs {

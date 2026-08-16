@@ -9,6 +9,7 @@ size: "空間／W240×H240×D1200cm、円板部／45Φ×H30×4基(cm)"
 coverImage: /images/works/swaying-meeting-the-dream/cover.jpg
 images:
   - /images/works/swaying-meeting-the-dream/01.jpg
+video: /videos/works/swaying-meeting-the-dream/video.mp4
 oldPath: /12
 ---
 

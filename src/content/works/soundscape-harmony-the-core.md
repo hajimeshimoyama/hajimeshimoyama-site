@@ -9,6 +9,7 @@ size: W60×H300×D60cm
 coverImage: /images/works/soundscape-harmony-the-core/cover.jpg
 images:
   - /images/works/soundscape-harmony-the-core/01.jpg
+video: /videos/works/soundscape-harmony-the-core/video.mp4
 oldPath: /9
 ---
 

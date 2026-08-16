@@ -10,6 +10,7 @@ coverImage: /images/works/soundscape-harmony-kobe/cover.jpg
 images:
   - /images/works/soundscape-harmony-kobe/01.jpg
   - /images/works/soundscape-harmony-kobe/02.jpg
+video: /videos/works/soundscape-harmony-kobe/video.mp4
 oldPath: /8
 ---
 
