@@ -4,6 +4,8 @@ titleEn: "The Skeleton of the Form"
 year: 2012
 category: exhibition
 venue: "宇宙芸術展　内と外－宇宙からの視点編\nいりや画廊（東京）など"
+materials: スチール切削加工、OPクリア仕上
+size: W18×H30×D18cm
 coverImage: /images/works/the-skeleton-of-the-form/cover.jpg
 images:
   - /images/works/the-skeleton-of-the-form/01.jpg
