@@ -4,7 +4,7 @@ titleEn: "Flowers behind the back of the universe"
 year: 2017
 category: permanent
 venue: "Polytech Festival 2017\nFestival of Science, Art and Technology\nMoscow, Russia\n宇宙芸術研究部会"
-coverImage: /images/works/flowers-behind-the-back-of-the-universe/01.jpg
+coverImage: /images/works/flowers-behind-the-back-of-the-universe/cover.jpg
 images:
   - /images/works/flowers-behind-the-back-of-the-universe/01.jpg
   - /images/works/flowers-behind-the-back-of-the-universe/02.jpg

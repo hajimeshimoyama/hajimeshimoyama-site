@@ -3,7 +3,7 @@ title: "鹿児島T病院エレベータホール"
 year: 2021
 category: permanent
 venue: "鹿児島県"
-coverImage: /images/works/kagoshima-t-hospital-elevator-hall/01.jpg
+coverImage: /images/works/kagoshima-t-hospital-elevator-hall/cover.jpg
 images:
   - /images/works/kagoshima-t-hospital-elevator-hall/01.jpg
   - /images/works/kagoshima-t-hospital-elevator-hall/02.jpg

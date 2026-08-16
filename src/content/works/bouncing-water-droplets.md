@@ -4,7 +4,7 @@ titleEn: "Bouncing water droplets"
 year: 2022
 category: exhibition
 venue: "環境芸術学会 第23回大会 研究作品発表展\n東京都\nオリエアートギャラリー"
-coverImage: /images/works/bouncing-water-droplets/01.jpg
+coverImage: /images/works/bouncing-water-droplets/cover.jpg
 images:
   - /images/works/bouncing-water-droplets/01.jpg
   - /images/works/bouncing-water-droplets/02.jpg

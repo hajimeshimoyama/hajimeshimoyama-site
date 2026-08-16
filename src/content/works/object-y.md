@@ -4,7 +4,7 @@ titleEn: "Object Y"
 year: 2008
 category: permanent
 venue: "個人蔵"
-coverImage: /images/works/object-y/01.jpg
+coverImage: /images/works/object-y/cover.jpg
 images:
   - /images/works/object-y/01.jpg
   - /images/works/object-y/02.jpg

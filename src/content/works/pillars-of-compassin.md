@@ -4,7 +4,7 @@ titleEn: "Pillars of Compassin"
 year: 2008
 category: exhibition
 venue: "東京ミッドタウンアワード2008アートコンペティション\nPioRyo"
-coverImage: /images/works/pillars-of-compassin/01.jpg
+coverImage: /images/works/pillars-of-compassin/cover.jpg
 images:
   - /images/works/pillars-of-compassin/01.jpg
 oldPath: /11

@@ -4,7 +4,7 @@ titleEn: "Designing a Entrance Garden for the LTD"
 year: 2017
 category: permanent
 venue: "岐阜県"
-coverImage: /images/works/designing-a-entrance-garden-for-the-ltd/01.jpg
+coverImage: /images/works/designing-a-entrance-garden-for-the-ltd/cover.jpg
 images:
   - /images/works/designing-a-entrance-garden-for-the-ltd/01.jpg
   - /images/works/designing-a-entrance-garden-for-the-ltd/02.jpg

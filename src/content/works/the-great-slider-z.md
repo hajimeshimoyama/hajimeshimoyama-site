@@ -4,7 +4,7 @@ titleEn: "The Great Slider Z"
 year: 2021
 category: exhibition
 venue: "『樋口雄一とアーティストたちのロボット展 ー新しい環境芸術の広がりー』\n東京都\nオリエアート・ギャラリー"
-coverImage: /images/works/the-great-slider-z/01.jpg
+coverImage: /images/works/the-great-slider-z/cover.jpg
 images:
   - /images/works/the-great-slider-z/01.jpg
   - /images/works/the-great-slider-z/02.jpg

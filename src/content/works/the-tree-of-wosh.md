@@ -4,7 +4,7 @@ titleEn: "The Tree of Wosh"
 year: 2014
 category: permanent
 venue: "Designing an Object for the Hospital\n兵庫県"
-coverImage: /images/works/the-tree-of-wosh/01.jpg
+coverImage: /images/works/the-tree-of-wosh/cover.jpg
 images:
   - /images/works/the-tree-of-wosh/01.jpg
   - /images/works/the-tree-of-wosh/02.jpg

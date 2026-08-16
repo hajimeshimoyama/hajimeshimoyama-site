@@ -4,7 +4,7 @@ titleEn: "Designing an outdoor sign monument of the Waterworks Bureau"
 year: 2017
 category: permanent
 venue: "岡山県"
-coverImage: /images/works/designing-an-outdoor-sign-monument-of-the-waterworks-bureau/01.jpg
+coverImage: /images/works/designing-an-outdoor-sign-monument-of-the-waterworks-bureau/cover.jpg
 images:
   - /images/works/designing-an-outdoor-sign-monument-of-the-waterworks-bureau/01.jpg
   - /images/works/designing-an-outdoor-sign-monument-of-the-waterworks-bureau/02.jpg

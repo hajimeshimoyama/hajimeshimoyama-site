@@ -4,7 +4,7 @@ titleEn: "Designing an outdoor monument of Hiroshima Red Cross Nursing College"
 year: 2014
 category: permanent
 venue: "広島県"
-coverImage: /images/works/designing-an-outdoor-monument-of-hiroshima-red-cross-nursing-college/01.jpg
+coverImage: /images/works/designing-an-outdoor-monument-of-hiroshima-red-cross-nursing-college/cover.jpg
 images:
   - /images/works/designing-an-outdoor-monument-of-hiroshima-red-cross-nursing-college/01.jpg
   - /images/works/designing-an-outdoor-monument-of-hiroshima-red-cross-nursing-college/02.jpg
