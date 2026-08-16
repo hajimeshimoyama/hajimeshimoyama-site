@@ -5,7 +5,7 @@ year: 2015
 category: permanent
 venue: 愛知県弥富市
 materials: スチールOP仕上（一部建材用カラーシート貼）
-size: H1925×W5675×D260cm
+size: "H1000×W520×D260mm×10枚（全長H約2000×W約5600×D260mm）"
 coverImage: /images/works/designing-an-entrance-relief-for-the-hospital/cover.jpg
 images:
   - /images/works/designing-an-entrance-relief-for-the-hospital/01.jpg

@@ -5,7 +5,7 @@ year: 2017
 category: permanent
 venue: 大阪府泉南市
 materials: スチールOP塗装仕上（裏面蛍光塗料仕上）
-size: H2700×W18000×D50
+size: "H600×W1800×D50mm×10枚、350角〜750角×11枚（全長H2700×W18000×D50mm）"
 coverImage: /images/works/designing-a-relief-for-the-hospital/cover.jpg
 images:
   - /images/works/designing-a-relief-for-the-hospital/01.jpg

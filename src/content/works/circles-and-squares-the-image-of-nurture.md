@@ -4,6 +4,8 @@ titleEn: "Circles and Squares – The Image of Nurture"
 year: 2013
 category: permanent
 venue: "兵庫県加東市\n第15回環境芸術学会大会 作品発表（伊香保温泉 群馬県）"
+materials: "本体／SUS304加工バイブレーション仕上げ、一部鏡面仕上げ、銘板／黒御影石"
+size: "本体　W850×D980×H3020mm／基礎　W1000×D1000×H700mm程度／銘板　W500×D500×H400mm"
 coverImage: /images/works/circles-and-squares-the-image-of-nurture/cover.jpg
 images:
   - /images/works/circles-and-squares-the-image-of-nurture/01.jpg
