@@ -3,15 +3,99 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Contact — Hajime Shimoyama">
-  <div class="wrap page-placeholder">
-    <p>Contact ページは準備中です。</p>
+  <div class="wrap contact">
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact__form">
+      <input type="hidden" name="form-name" value="contact" />
+      <p class="contact__honeypot"><label>Don't fill this out: <input name="bot-field" /></label></p>
+
+      <label class="contact__field">
+        <span>Name *</span>
+        <input type="text" name="name" required />
+      </label>
+
+      <label class="contact__field">
+        <span>Email Address *</span>
+        <input type="email" name="email" required />
+      </label>
+
+      <label class="contact__field">
+        <span>Message *</span>
+        <textarea name="message" rows="6" required></textarea>
+      </label>
+
+      <button type="submit" class="contact__submit">Submit</button>
+    </form>
+
+    <a href="/" class="contact__back">↑ Back to Top</a>
   </div>
 </BaseLayout>
 
 <style>
-  .page-placeholder {
+  .contact {
+    max-width: 32rem;
+    padding-block: clamp(1rem, 4vw, 2rem) clamp(3rem, 8vw, 6rem);
+  }
+
+  .contact__honeypot {
+    position: absolute;
+    left: -9999px;
+  }
+
+  .contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: clamp(2.5rem, 6vw, 4rem);
+  }
+
+  .contact__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+  }
+
+  .contact__field input,
+  .contact__field textarea {
+    font: inherit;
+    color: var(--color-text);
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--color-border);
+    padding: 0.5rem 0;
+    resize: vertical;
+  }
+
+  .contact__field input:focus,
+  .contact__field textarea:focus {
+    outline: none;
+    border-bottom-color: var(--color-text);
+  }
+
+  .contact__submit {
+    align-self: center;
+    margin-top: 1rem;
+    padding: 0.6rem 2.5rem;
+    font: inherit;
+    font-family: var(--font-serif);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--color-text);
+    background: transparent;
+    border: 1px solid var(--color-text);
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  .contact__submit:hover {
+    background: var(--color-text);
+    color: var(--color-bg);
+  }
+
+  .contact__back {
+    display: block;
     text-align: center;
     color: var(--color-text-muted);
-    padding-block: clamp(4rem, 10vw, 8rem);
   }
 </style>

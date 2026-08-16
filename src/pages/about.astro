@@ -1,17 +1,142 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const statement = `なるほど！と思える手段で
+「時間」や「空間」または「言葉」などの目に見えないものを実体化することで、
+見慣れた日常も、美しく、楽しさに満ちあふれている
+という事を表現したいと思っています。`;
+
+const statementEn = `My desire is to express the beauty and pleasure that is hidden within our everyday world.
+In doing self, I attempt to give physical expression
+to time, space, spoken words and other things not visible.
+The response I hope for is "That's it!"`;
+
+const bio = [
+  '1970年　横浜市生',
+  '1992年　東京造形大学 造形学部 デザイン学科 I類（視覚伝達計画）卒業',
+  '1993年　東京造形大学 造形学部 デザイン学科 研究生修了',
+];
+
+const current = [
+  'デザイナー／造形家',
+  '実践女子大学 文学部 美学美術史学科 教授（デザイン実技）',
+  '群馬県立女子大学院 文学研究科 芸術学 非常勤講師',
+  '関東学院大学 人間共生学部 共生デザイン学科 非常勤講師',
+  '',
+  '環境芸術学会（理事）',
+  '宇宙芸術研究部会',
+  '環境芸術素材研究部会',
+  '人と社会の活性化研究部会',
+  '日本美術家連盟 no.010425',
+  'PioRyo（アートユニットピオリオ）',
+];
+
+const awards = [
+  '1991年　第55回新制作展スペースデザイン部 初入選',
+  '1996年　第4回横浜彫刻展優秀マケット賞',
+  '2000年　第1回全国漆喰鏝絵コンクール入選',
+  '2002年　第66回新制作展スペースデザイン部新作家賞',
+  '2004年　第68回新制作展スペースデザイン部新作家賞',
+  '2005年　新制作協会スペースデザイン部 会員推挙（2005年〜2016年）',
+  '2007年　神戸ビエンナーレ2007アートインコンテナ 国際コンペティション特別賞（PioRyo）',
+  '2008年　第一回 ART COMPE 「神々への捧げもの」 最優秀作品賞',
+  '2009年　神戸ビエンナーレ2009アートインコンテナ 国際展 特別賞（PioRyo）',
+  '2010年　World Space Creators Awards 2010 プロフェッショナル部門ショップヴィジュアル賞',
+  '2011年　神戸ビエンナーレ2011アートインコンテナ 国際展 奨励賞（PIoRyo）',
+  '2013年　神戸ビエンナーレ2013アートインコンテナ 国際展 特別賞（PioRyo）',
+  '2014年　種子島宇宙芸術祭プレイベント2014 ミッション in Tanegashima 招待（宇宙芸術研究部会）',
+  '2015年　神戸ビエンナーレ2015入賞作家招待作品展 招待（PioRyo）',
+  '2016年　グッドデザインぐんま2016 最優秀賞（有限会社 山崎製作所）',
+  '2017年　Polytech Festival 2017 – Festival of Science, Art and Technology 招待（宇宙芸術研究部会）',
+  '2018年　第52回日本サインデザイン賞 銅賞（共同）',
+  '2019年　第16回KAJIMA彫刻コンクール模型入選作品',
+  '2019年　環境芸術学会賞 奨励賞',
+  '2020年　第15回大分アジア彫刻展 入選',
+  'など',
+];
 ---
 
-<BaseLayout title="About — Hajime Shimoyama">
-  <div class="wrap page-placeholder">
-    <p>About ページは準備中です。</p>
+<BaseLayout title="About — Hajime Shimoyama" description={statementEn}>
+  <div class="wrap about">
+    <section class="about__statement">
+      <p class="about__statement-ja">{statement}</p>
+      <p class="about__statement-en">{statementEn}</p>
+    </section>
+
+    <p class="about__name">下山 肇／SHIMOYAMA Hajime</p>
+
+    <section class="about__block">
+      {bio.map((line) => <p>{line}</p>)}
+    </section>
+
+    <section class="about__block">
+      <h2>現在</h2>
+      {current.map((line) => (line ? <p>{line}</p> : <p class="about__spacer" />))}
+    </section>
+
+    <section class="about__block">
+      <h2>主な作歴・賞歴など</h2>
+      {awards.map((line) => <p>{line}</p>)}
+    </section>
+
+    <a href="/" class="about__back">↑ Back to Top</a>
   </div>
 </BaseLayout>
 
 <style>
-  .page-placeholder {
+  .about {
+    max-width: 40rem;
+    padding-block: clamp(1rem, 4vw, 2rem) clamp(3rem, 8vw, 6rem);
+  }
+
+  .about__statement {
+    text-align: center;
+    margin-bottom: clamp(2.5rem, 6vw, 4rem);
+  }
+
+  .about__statement-ja {
+    white-space: pre-line;
+    margin: 0 0 1.25rem;
+  }
+
+  .about__statement-en {
+    white-space: pre-line;
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .about__name {
+    text-align: center;
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin-bottom: clamp(2rem, 5vw, 3rem);
+  }
+
+  .about__block {
+    margin-bottom: clamp(2rem, 5vw, 3rem);
+  }
+
+  .about__block p {
+    margin: 0.15rem 0;
+  }
+
+  .about__spacer {
+    height: 0.75rem;
+  }
+
+  .about__block h2 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 0 0 0.75rem;
+  }
+
+  .about__back {
+    display: block;
     text-align: center;
     color: var(--color-text-muted);
-    padding-block: clamp(4rem, 10vw, 8rem);
   }
 </style>
