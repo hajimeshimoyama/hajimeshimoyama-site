@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap');
 
 :root {
   --color-bg: #ffffff;
   --color-text: #1c1c1a;
   --color-text-muted: #8c8c86;
   --color-border: #e6e6e2;
-  --font-serif: 'Shippori Mincho', 'Noto Serif JP', serif;
-  --font-sans: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+  --font-serif: 'Zen Old Mincho', 'Noto Serif JP', serif;
+  --font-sans: 'Zen Kaku Gothic New', 'Hiragino Kaku Gothic ProN', sans-serif;
   --measure: 72rem;
   --space-page: clamp(1.5rem, 4vw, 4rem);
 }
@@ -23,7 +23,7 @@ body {
   margin: 0;
   color: var(--color-text);
   font-family: var(--font-sans);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.8;
   -webkit-font-smoothing: antialiased;
 }
