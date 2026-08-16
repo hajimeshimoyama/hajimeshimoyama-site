@@ -4,6 +4,8 @@ titleEn: "Bouncing water droplets"
 year: 2022
 category: exhibition
 venue: "環境芸術学会 第23回大会 研究作品発表展\n東京都\nオリエアートギャラリー"
+materials: スチール・クローム蒸着メッキ仕上げ
+size: "W50×H230×D100cm（各作品 W50×H50×D50cm×2）"
 coverImage: /images/works/bouncing-water-droplets/cover.jpg
 images:
   - /images/works/bouncing-water-droplets/01.jpg
