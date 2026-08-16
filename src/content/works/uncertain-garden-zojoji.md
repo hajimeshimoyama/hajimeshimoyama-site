@@ -13,3 +13,5 @@ images:
   - /images/works/uncertain-garden-zojoji/05.jpg
 oldPath: /19
 ---
+
+2018年のサバティカル期間中、スイスとフランスの国境にまたがる国際研究機関「CERN（欧州素粒子物理学研究所）」の一部署「IdeaSquare」に滞在した際に行った研究「不確かな庭／Uncertain Garden」の空間リノベーションデザインをさらに進め、環境芸術学会第20回大会にて作品発表・口頭発表として展開した作品。共同研究として70th International Astronautical Congress（Washington D.C.）でも口頭発表されている。
