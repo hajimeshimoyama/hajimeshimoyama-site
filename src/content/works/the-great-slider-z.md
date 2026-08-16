@@ -18,5 +18,3 @@ images:
   - /images/works/the-great-slider-z/08.jpg
 oldPath: /z
 ---
-
-「[解脱の発射台](/works/the-other-side-of-the-endless-knot)」シリーズのパーツである滑り台の造形を組み合わせてデザインした作品。
