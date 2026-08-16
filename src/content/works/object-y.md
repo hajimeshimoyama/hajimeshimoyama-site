@@ -3,7 +3,7 @@ title: "YSKW Project Object \"Y”"
 titleEn: "Object Y"
 year: 2008
 category: permanent
-venue: "個人蔵"
+venue: "長野県北佐久郡軽井沢町（個人住宅）\n「YSKWアートプロジェクト」"
 materials: ビーズ法発泡スチロール（EPS）
 size: W110×H100×D110cm
 coverImage: /images/works/object-y/cover.jpg
@@ -14,4 +14,4 @@ images:
 oldPath: /yskw-project-relief-y
 ---
 
-風や水の流れをイメージした空間造形。3次元を認識する三面図の、平面・正面・側面それぞれを連続するように移動したときに生じる、架空の軌跡を形態として立体化した。住空間演出デザイン「YSKWアートプロジェクト」のスタディモデルを作品化したもの。
+風や水の流れをイメージした空間造形。3次元を認識する三面図の、平面・正面・側面それぞれを連続するように移動したときに生じる、架空の軌跡を形態として立体化した。個人住宅への空間演出「YSKWアートプロジェクト」の一環として、「[Object S](/works/object-s)」「[ウネ](/works/relief-nami)」とあわせて設置された。
