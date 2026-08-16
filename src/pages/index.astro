@@ -1,17 +1,41 @@
 ---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import WorkCard from '../components/WorkCard.astro';
 
+const allWorks = await getCollection('works');
+const works = allWorks.sort((a, b) => {
+  if (a.data.order !== undefined || b.data.order !== undefined) {
+    return (a.data.order ?? 999) - (b.data.order ?? 999);
+  }
+  return b.data.year - a.data.year;
+});
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Hajime Shimoyama — Art and Design">
+  <div class="wrap works-grid">
+    {works.map((work) => (
+      <WorkCard
+        slug={work.id}
+        title={work.data.title}
+        year={work.data.year}
+        coverImage={work.data.coverImage}
+      />
+    ))}
+  </div>
+</BaseLayout>
+
+<style>
+  .works-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3rem);
+    padding-bottom: clamp(3rem, 8vw, 6rem);
+  }
+
+  @media (min-width: 56rem) {
+    .works-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>
