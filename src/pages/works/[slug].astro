@@ -28,8 +28,15 @@ const { Content } = await render(work);
 
     <div class="work-detail__gallery">
       {gallery.map((src) => (
-        <img src={src} alt={title} loading="lazy" />
+        <button type="button" class="work-detail__gallery-item js-lightbox-open" data-src={src}>
+          <img src={src} alt={title} loading="lazy" />
+        </button>
       ))}
+    </div>
+
+    <div class="lightbox js-lightbox" hidden>
+      <button type="button" class="lightbox__close js-lightbox-close" aria-label="閉じる">×</button>
+      <img class="lightbox__image js-lightbox-image" src="" alt="" />
     </div>
 
     {video && (
@@ -62,6 +69,43 @@ const { Content } = await render(work);
     <a href="/" class="work-detail__back">↑ Back to Top</a>
   </article>
 </BaseLayout>
+
+<script>
+  const lightbox = document.querySelector<HTMLDivElement>('.js-lightbox');
+  const lightboxImage = document.querySelector<HTMLImageElement>('.js-lightbox-image');
+  const openers = document.querySelectorAll<HTMLButtonElement>('.js-lightbox-open');
+  const closeBtn = document.querySelector<HTMLButtonElement>('.js-lightbox-close');
+
+  function openLightbox(src: string, alt: string) {
+    if (!lightbox || !lightboxImage) return;
+    lightboxImage.src = src;
+    lightboxImage.alt = alt;
+    lightbox.hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    if (!lightbox) return;
+    lightbox.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  openers.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const src = btn.dataset.src;
+      const img = btn.querySelector('img');
+      if (src) openLightbox(src, img?.alt ?? '');
+    });
+  });
+
+  closeBtn?.addEventListener('click', closeLightbox);
+  lightbox?.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
 
 <style>
   .work-detail {
@@ -106,9 +150,59 @@ const { Content } = await render(work);
     margin-bottom: clamp(2rem, 5vw, 3.5rem);
   }
 
-  .work-detail__gallery img {
+  .work-detail__gallery-item {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: zoom-in;
+  }
+
+  .work-detail__gallery-item img {
+    display: block;
     width: 100%;
     object-fit: cover;
+  }
+
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(1.5rem, 5vw, 4rem);
+    background: rgba(20, 20, 18, 0.94);
+  }
+
+  .lightbox[hidden] {
+    display: none;
+  }
+
+  .lightbox__image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .lightbox__close {
+    position: fixed;
+    top: clamp(1rem, 3vw, 2rem);
+    right: clamp(1rem, 3vw, 2rem);
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: transparent;
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+  }
+
+  .lightbox__close:hover {
+    border-color: #fff;
   }
 
   .work-detail__video {
