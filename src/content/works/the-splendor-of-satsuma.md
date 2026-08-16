@@ -14,3 +14,6 @@ images:
   - /images/works/the-splendor-of-satsuma/06.jpg
 oldPath: /161beedfa7848b
 ---
+
+鹿児島県に新築された「[鹿児島T病院エレベータホール](/works/kagoshima-t-hospital-elevator-hall)」の空間演出デザインを発展させた実験作品。同県の伝統的工芸「薩摩切子」の色とカット文様の特徴を最大限活かしながら、複数の切子の重なりと光の動きが、壁面に強いコントラストを持った「透過光」と「反射光」の輝きを映し出す。
+
