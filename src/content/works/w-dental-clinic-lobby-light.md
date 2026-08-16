@@ -2,7 +2,7 @@
 title: "W歯科医院ロビーライト"
 year: 2011
 category: permanent
-venue: "神奈川県"
+venue: "神奈川県横浜市\n「W歯科医院」"
 coverImage: /images/works/w-dental-clinic-lobby-light/cover.jpg
 images:
   - /images/works/w-dental-clinic-lobby-light/01.jpg
@@ -11,3 +11,5 @@ images:
   - /images/works/w-dental-clinic-lobby-light/04.jpg
 oldPath: /w
 ---
+
+来院者へ軽やかな感覚を与えるために、照明器具としての機能も備えた、雲をイメージした吹き抜けからの釣り型オブジェ。委託者：W歯科医院。
