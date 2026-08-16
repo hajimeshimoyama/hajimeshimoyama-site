@@ -36,6 +36,12 @@ const { Content } = await render(work);
 
     <div class="lightbox js-lightbox" hidden>
       <button type="button" class="lightbox__close js-lightbox-close" aria-label="閉じる">×</button>
+      {gallery.length > 1 && (
+        <>
+          <button type="button" class="lightbox__nav lightbox__nav--prev js-lightbox-prev" aria-label="前の画像">‹</button>
+          <button type="button" class="lightbox__nav lightbox__nav--next js-lightbox-next" aria-label="次の画像">›</button>
+        </>
+      )}
       <img class="lightbox__image js-lightbox-image" src="" alt="" />
     </div>
 
@@ -75,11 +81,27 @@ const { Content } = await render(work);
   const lightboxImage = document.querySelector<HTMLImageElement>('.js-lightbox-image');
   const openers = document.querySelectorAll<HTMLButtonElement>('.js-lightbox-open');
   const closeBtn = document.querySelector<HTMLButtonElement>('.js-lightbox-close');
+  const prevBtn = document.querySelector<HTMLButtonElement>('.js-lightbox-prev');
+  const nextBtn = document.querySelector<HTMLButtonElement>('.js-lightbox-next');
 
-  function openLightbox(src: string, alt: string) {
-    if (!lightbox || !lightboxImage) return;
-    lightboxImage.src = src;
-    lightboxImage.alt = alt;
+  const items = Array.from(openers).map((btn) => ({
+    src: btn.dataset.src ?? '',
+    alt: btn.querySelector('img')?.alt ?? '',
+  }));
+
+  let currentIndex = 0;
+
+  function showImage(index: number) {
+    if (!lightboxImage || items.length === 0) return;
+    currentIndex = (index + items.length) % items.length;
+    const item = items[currentIndex];
+    lightboxImage.src = item.src;
+    lightboxImage.alt = item.alt;
+  }
+
+  function openLightbox(index: number) {
+    if (!lightbox) return;
+    showImage(index);
     lightbox.hidden = false;
     document.body.style.overflow = 'hidden';
   }
@@ -90,20 +112,21 @@ const { Content } = await render(work);
     document.body.style.overflow = '';
   }
 
-  openers.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const src = btn.dataset.src;
-      const img = btn.querySelector('img');
-      if (src) openLightbox(src, img?.alt ?? '');
-    });
+  openers.forEach((btn, index) => {
+    btn.addEventListener('click', () => openLightbox(index));
   });
 
   closeBtn?.addEventListener('click', closeLightbox);
+  prevBtn?.addEventListener('click', () => showImage(currentIndex - 1));
+  nextBtn?.addEventListener('click', () => showImage(currentIndex + 1));
   lightbox?.addEventListener('click', (e) => {
     if (e.target === lightbox) closeLightbox();
   });
   document.addEventListener('keydown', (e) => {
+    if (lightbox?.hidden) return;
     if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+    if (e.key === 'ArrowRight') showImage(currentIndex + 1);
   });
 </script>
 
@@ -203,6 +226,33 @@ const { Content } = await render(work);
 
   .lightbox__close:hover {
     border-color: #fff;
+  }
+
+  .lightbox__nav {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: transparent;
+    color: #fff;
+    font-size: 1.75rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+  }
+
+  .lightbox__nav:hover {
+    border-color: #fff;
+  }
+
+  .lightbox__nav--prev {
+    left: clamp(1rem, 3vw, 2rem);
+  }
+
+  .lightbox__nav--next {
+    right: clamp(1rem, 3vw, 2rem);
   }
 
   .work-detail__video {
