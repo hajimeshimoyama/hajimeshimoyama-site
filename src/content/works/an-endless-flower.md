@@ -8,6 +8,7 @@ coverImage: /images/works/an-endless-flower/cover.jpg
 images:
   - /images/works/an-endless-flower/01.jpg
   - /images/works/an-endless-flower/02.jpg
+  - /images/works/an-endless-flower/03.jpg
 oldPath: /18
 ---
 
