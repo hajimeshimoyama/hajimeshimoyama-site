@@ -11,4 +11,4 @@ images:
 oldPath: /yskw-project-relief
 ---
 
-一枚の板から無駄なくパーツを切り出し、繊細な変化を生み出す波形レリーフ。以降、縦横の比率を変えた展開版が愛知県弥富市の「[K病院エントランスレリーフ](/works/designing-an-entrance-relief-for-the-hospital)」（2015）など、複数の医療施設の壁面デザインに応用されている。
+一枚の板から無駄なくパーツを切り出し、繊細な変化を生み出す波形レリーフ。愛知県弥富市の「[K病院エントランスレリーフ](/works/designing-an-entrance-relief-for-the-hospital)」（2015）は、このレリーフの縦横の比率を変えた展開版。
