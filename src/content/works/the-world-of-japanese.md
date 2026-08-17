@@ -12,3 +12,5 @@ images:
   - /images/works/the-world-of-japanese/04.jpg
 oldPath: /world-space-creators-awards-2010
 ---
+
+図と地の反転によって図像学的に構成した作品、「[コトバノミナモト](/works/i-ro-ha-cube)」をインテリアのスケールで空間的に拡大したデザイン。
