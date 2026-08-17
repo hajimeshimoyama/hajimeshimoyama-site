@@ -14,4 +14,6 @@ images:
 oldPath: /19
 ---
 
-2018年のサバティカル期間中、スイスとフランスの国境にまたがる国際研究機関「CERN（欧州素粒子物理学研究所）」の一部署「IdeaSquare」に滞在した際に行った研究「不確かな庭／Uncertain Garden」の空間リノベーションデザインをさらに進め、環境芸術学会第20回大会にて作品発表・口頭発表として展開した作品。共同研究として70th International Astronautical Congress（Washington D.C.）でも口頭発表されている。
+2018年のサバティカル期間中に行った研究の一つ「不確かな庭／Uncertain Garden」についてさらに進め、その成果を環境芸術学会第20回大会にて作品発表および口頭発表として行った。口頭発表は『IdeaSquare, CERNにおける空間リノベーションデザインについて』。
+
+共同研究として、70th International Astronautical Congress（Washington D.C. USA）にて "UNCERTAIN GARDEN – SPACE DESIGN FOR FERTILIZING UNCERTAINTY AT IDEASQUARE, CERN" の口頭発表を行った。

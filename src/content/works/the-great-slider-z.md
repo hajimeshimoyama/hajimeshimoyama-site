@@ -18,3 +18,4 @@ images:
   - /images/works/the-great-slider-z/08.jpg
 oldPath: /z
 ---
+
