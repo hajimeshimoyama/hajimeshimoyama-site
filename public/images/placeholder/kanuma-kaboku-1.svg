@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" width="900" height="1100">
+  <rect width="900" height="1100" fill="#dde0e6"/>
+  <rect x="0" y="0" width="900" height="1100" fill="none" stroke="#bcc2cc" stroke-width="2"/>
+  <text x="450" y="540" text-anchor="middle" font-family="sans-serif" font-size="28" fill="#838a93">placeholder image</text>
+  <text x="450" y="580" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#9aa1ab">未来芸術 ロボットとAR（拡張現実） — 1</text>
+</svg>
