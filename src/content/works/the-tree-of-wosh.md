@@ -3,7 +3,7 @@ title: "思いの木"
 titleEn: "The Tree of Wosh"
 year: 2014
 category: permanent
-venue: "神戸市ポートアイランド　神戸国際フロンティアメディカルセンター\n兵庫県"
+venue: 兵庫県
 coverImage: /images/works/the-tree-of-wosh/cover.jpg
 images:
   - /images/works/the-tree-of-wosh/01.jpg

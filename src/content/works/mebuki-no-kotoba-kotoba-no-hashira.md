@@ -2,7 +2,7 @@
 title: "メブキノコトバ〜コトバノハシラ"
 year: 2011
 category: permanent
-venue: "「湯けむりとアート展」\n伊香保アートギャラリー　群馬県"
+venue: 群馬県
 materials: スチールOP仕上
 size: "W60×H180×D60cm×3器"
 coverImage: /images/works/mebuki-no-kotoba-kotoba-no-hashira/cover.jpg

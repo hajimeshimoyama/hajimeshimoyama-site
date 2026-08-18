@@ -2,7 +2,7 @@
 title: "季（とき）の雫"
 year: 2022
 category: permanent
-venue: "東京都港区虎ノ門4丁目\n新築集合住宅エントランスガーデン内"
+venue: 東京都
 materials: アルミ鋳物、蒸着メッキ仕上
 size: 高1000×500φmm
 coverImage: /images/works/toki-no-shizuku/cover.jpg

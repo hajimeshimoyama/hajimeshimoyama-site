@@ -2,7 +2,7 @@
 title: "鹿児島T病院エレベータホール"
 year: 2021
 category: permanent
-venue: "鹿児島県鹿児島市南栄5丁目10-51\n医療法人徳洲会 鹿児島徳洲会病院\nエレベータホール（1〜7階壁面）"
+venue: 鹿児島県
 materials: 薩摩切子加工物（高さ90×幅80×奥行き40mm）と超狭角スポットライトによる空間演出装置、各階3箇所ずつ計21個
 coverImage: /images/works/kagoshima-t-hospital-elevator-hall/cover.jpg
 images:

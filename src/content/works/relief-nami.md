@@ -3,7 +3,7 @@ title: "YSKW Project Relief \"ウネ”"
 titleEn: "Relief Nami"
 year: 2009
 category: permanent
-venue: "長野県北佐久郡軽井沢町（個人住宅）\n「YSKWアートプロジェクト」"
+venue: 長野県
 coverImage: /images/works/relief-nami/cover.jpg
 images:
   - /images/works/relief-nami/01.jpg

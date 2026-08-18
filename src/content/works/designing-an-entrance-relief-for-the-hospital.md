@@ -3,7 +3,7 @@ title: "K病院エントランスレリーフ"
 titleEn: "Designing an Entrance Relief for the Hospital"
 year: 2015
 category: permanent
-venue: 愛知県弥富市
+venue: 愛知県
 materials: スチールOP仕上（一部建材用カラーシート貼）
 size: "H1000×W520×D260mm×10枚（全長H約2000×W約5600×D260mm）"
 coverImage: /images/works/designing-an-entrance-relief-for-the-hospital/cover.jpg

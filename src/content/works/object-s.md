@@ -3,7 +3,7 @@ title: "YSKW Project Object \"S”"
 titleEn: "Object S"
 year: 2008
 category: permanent
-venue: "長野県北佐久郡軽井沢町（個人住宅）\n「YSKWアートプロジェクト」"
+venue: 長野県
 materials: ステンレス1.6mmバイブレーション小口鏡面磨き仕上
 size: W83×H46×D39cm
 coverImage: /images/works/object-s/cover.jpg

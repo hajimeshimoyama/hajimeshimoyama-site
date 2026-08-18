@@ -3,7 +3,7 @@ title: "広島赤十字看護専門学校記念碑"
 titleEn: "Designing an outdoor monument of Hiroshima Red Cross Nursing College"
 year: 2014
 category: permanent
-venue: "広島赤十字・原爆病院メモリアルパーク\n広島県"
+venue: 広島県
 materials: "花崗岩（稲田石）、ステンレス銘板（t3mm ヘアライン仕上げ、文字エッチング）"
 size: "本体　W1800×H800×D400mm／銘板　W930×H240mm"
 coverImage: /images/works/designing-an-outdoor-monument-of-hiroshima-red-cross-nursing-college/cover.jpg

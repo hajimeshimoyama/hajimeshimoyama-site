@@ -3,7 +3,7 @@ title: "N病院待合吹抜壁面レリーフ"
 titleEn: "Designing a Relief for the Hospital"
 year: 2017
 category: permanent
-venue: 大阪府泉南市
+venue: 大阪府
 materials: スチールOP塗装仕上（裏面蛍光塗料仕上）
 size: "H600×W1800×D50mm×10枚、350角〜750角×11枚（全長H2700×W18000×D50mm）"
 coverImage: /images/works/designing-a-relief-for-the-hospital/cover.jpg

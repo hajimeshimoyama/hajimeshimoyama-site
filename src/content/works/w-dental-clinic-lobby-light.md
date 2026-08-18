@@ -2,7 +2,7 @@
 title: "W歯科医院ロビーライト"
 year: 2011
 category: permanent
-venue: "神奈川県横浜市\n「W歯科医院」"
+venue: 神奈川県
 coverImage: /images/works/w-dental-clinic-lobby-light/cover.jpg
 images:
   - /images/works/w-dental-clinic-lobby-light/01.jpg

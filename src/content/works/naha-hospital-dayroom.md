@@ -2,7 +2,7 @@
 title: 那覇市民病院デイルーム光空間
 year: 2025
 category: permanent
-venue: 那覇市民病院 デイルーム（5〜9階）
+venue: 沖縄県
 materials: 曲面ダイクロイックミラーほか
 coverImage: /images/works/naha-hospital-dayroom/cover.jpg
 imageGroups:

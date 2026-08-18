@@ -3,7 +3,7 @@ title: "YSKW Project Object \"Y”"
 titleEn: "Object Y"
 year: 2008
 category: permanent
-venue: "長野県北佐久郡軽井沢町（個人住宅）\n「YSKWアートプロジェクト」"
+venue: 長野県
 materials: ビーズ法発泡スチロール（EPS）
 size: W110×H100×D110cm
 coverImage: /images/works/object-y/cover.jpg
