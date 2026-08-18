@@ -6,23 +6,11 @@ venue: 那覇市民病院 デイルーム（5〜9階）
 materials: 曲面ダイクロイックミラーほか
 coverImage: /images/works/naha-hospital-dayroom/cover.jpg
 imageGroups:
-  - label: 5階
+  - label: 9階
     images:
-      - /images/works/naha-hospital-dayroom/04.jpg
-      - /images/works/naha-hospital-dayroom/01.jpg
-      - /images/works/naha-hospital-dayroom/02.jpg
-      - /images/works/naha-hospital-dayroom/03.jpg
-  - label: 6階
-    images:
-      - /images/works/naha-hospital-dayroom/07.jpg
-      - /images/works/naha-hospital-dayroom/06.jpg
-      - /images/works/naha-hospital-dayroom/05.jpg
-  - label: 7階
-    images:
-      - /images/works/naha-hospital-dayroom/11.jpg
-      - /images/works/naha-hospital-dayroom/09.jpg
-      - /images/works/naha-hospital-dayroom/08.jpg
-      - /images/works/naha-hospital-dayroom/10.jpg
+      - /images/works/naha-hospital-dayroom/18.jpg
+      - /images/works/naha-hospital-dayroom/19.jpg
+      - /images/works/naha-hospital-dayroom/20.jpg
   - label: 8階
     images:
       - /images/works/naha-hospital-dayroom/16.jpg
@@ -31,11 +19,23 @@ imageGroups:
       - /images/works/naha-hospital-dayroom/12.jpg
       - /images/works/naha-hospital-dayroom/14.jpg
       - /images/works/naha-hospital-dayroom/15.jpg
-  - label: 9階
+  - label: 7階
     images:
-      - /images/works/naha-hospital-dayroom/18.jpg
-      - /images/works/naha-hospital-dayroom/19.jpg
-      - /images/works/naha-hospital-dayroom/20.jpg
+      - /images/works/naha-hospital-dayroom/11.jpg
+      - /images/works/naha-hospital-dayroom/09.jpg
+      - /images/works/naha-hospital-dayroom/08.jpg
+      - /images/works/naha-hospital-dayroom/10.jpg
+  - label: 6階
+    images:
+      - /images/works/naha-hospital-dayroom/07.jpg
+      - /images/works/naha-hospital-dayroom/06.jpg
+      - /images/works/naha-hospital-dayroom/05.jpg
+  - label: 5階
+    images:
+      - /images/works/naha-hospital-dayroom/04.jpg
+      - /images/works/naha-hospital-dayroom/01.jpg
+      - /images/works/naha-hospital-dayroom/02.jpg
+      - /images/works/naha-hospital-dayroom/03.jpg
 video: /videos/works/naha-hospital-dayroom/video.mp4
 ---
 
