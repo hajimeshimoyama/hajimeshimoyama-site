@@ -8,33 +8,33 @@ coverImage: /images/works/naha-hospital-dayroom/cover.jpg
 imageGroups:
   - label: 5階
     images:
-      - /images/works/naha-hospital-dayroom/01.jpg
       - /images/works/naha-hospital-dayroom/02.jpg
+      - /images/works/naha-hospital-dayroom/01.jpg
       - /images/works/naha-hospital-dayroom/03.jpg
       - /images/works/naha-hospital-dayroom/04.jpg
   - label: 6階
     images:
-      - /images/works/naha-hospital-dayroom/06.jpg
       - /images/works/naha-hospital-dayroom/05.jpg
+      - /images/works/naha-hospital-dayroom/06.jpg
       - /images/works/naha-hospital-dayroom/07.jpg
   - label: 7階
     images:
-      - /images/works/naha-hospital-dayroom/10.jpg
       - /images/works/naha-hospital-dayroom/09.jpg
+      - /images/works/naha-hospital-dayroom/10.jpg
       - /images/works/naha-hospital-dayroom/08.jpg
       - /images/works/naha-hospital-dayroom/11.jpg
   - label: 8階
     images:
-      - /images/works/naha-hospital-dayroom/13.jpg
-      - /images/works/naha-hospital-dayroom/15.jpg
-      - /images/works/naha-hospital-dayroom/12.jpg
       - /images/works/naha-hospital-dayroom/14.jpg
+      - /images/works/naha-hospital-dayroom/13.jpg
+      - /images/works/naha-hospital-dayroom/12.jpg
+      - /images/works/naha-hospital-dayroom/15.jpg
       - /images/works/naha-hospital-dayroom/16.jpg
       - /images/works/naha-hospital-dayroom/17.jpg
   - label: 9階
     images:
-      - /images/works/naha-hospital-dayroom/19.jpg
       - /images/works/naha-hospital-dayroom/18.jpg
+      - /images/works/naha-hospital-dayroom/19.jpg
       - /images/works/naha-hospital-dayroom/20.jpg
 ---
 
