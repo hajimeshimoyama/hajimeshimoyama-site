@@ -11,8 +11,7 @@ images:
   - /images/works/toki-no-shizuku/02.jpg
   - /images/works/toki-no-shizuku/03.jpg
 oldPath: /1638ef0f858916
+credit: 撮影：加藤 健
 ---
 
 「作品」の存在意義として一般的に考えられている「インパクト」や「個性」などによって得られる存在感から離れ、「さりげない」ということについて着目し、「雫」をテーマに具現化。
-
-撮影：加藤 健

@@ -11,7 +11,7 @@ export async function getStaticPaths() {
 }
 
 const { work } = Astro.props;
-const { title, titleEn, year, venue, period, materials, size, images, imageGroups, coverImage, video } = work.data;
+const { title, titleEn, year, venue, period, materials, size, images, imageGroups, coverImage, video, credit } = work.data;
 const gallery = imageGroups
   ? imageGroups.flatMap((g) => g.images)
   : images.length > 0
@@ -90,6 +90,8 @@ const { Content } = await render(work);
     <div class="work-detail__body">
       <Content />
     </div>
+
+    {credit && <p class="work-detail__credit">{credit}</p>}
 
     <a href="/" class="work-detail__back">↑ Back to Top</a>
   </article>
@@ -333,6 +335,14 @@ const { Content } = await render(work);
 
   .work-detail__body :global(a:hover) {
     text-decoration-color: var(--color-text);
+  }
+
+  .work-detail__credit {
+    max-width: 42rem;
+    margin: -2rem auto clamp(3rem, 6vw, 4rem);
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    white-space: pre-line;
   }
 
   .work-detail__back {
