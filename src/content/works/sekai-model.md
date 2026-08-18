@@ -10,6 +10,7 @@ size: H500×W100×D100×5本、H15m×W18m×D36m程度（AR）
 coverImage: /images/works/sekai-model/cover.jpg
 images:
   - /images/works/sekai-model/04.jpg
+  - /images/works/sekai-model/06.jpg
   - /images/works/sekai-model/03.jpg
   - /images/works/sekai-model/05.jpg
   - /images/works/sekai-model/01.jpg
