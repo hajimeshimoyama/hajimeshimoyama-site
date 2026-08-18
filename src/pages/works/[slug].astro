@@ -11,8 +11,12 @@ export async function getStaticPaths() {
 }
 
 const { work } = Astro.props;
-const { title, titleEn, year, venue, period, materials, size, images, coverImage, video } = work.data;
-const gallery = images.length > 0 ? images : [coverImage];
+const { title, titleEn, year, venue, period, materials, size, images, imageGroups, coverImage, video } = work.data;
+const gallery = imageGroups
+  ? imageGroups.flatMap((g) => g.images)
+  : images.length > 0
+    ? images
+    : [coverImage];
 const { Content } = await render(work);
 ---
 
@@ -26,13 +30,28 @@ const { Content } = await render(work);
       <p class="work-detail__year">{year}</p>
     </header>
 
-    <div class="work-detail__gallery">
-      {gallery.map((src) => (
-        <button type="button" class="work-detail__gallery-item js-lightbox-open" data-src={src}>
-          <img src={src} alt={title} loading="lazy" />
-        </button>
-      ))}
-    </div>
+    {imageGroups ? (
+      imageGroups.map((group) => (
+        <section class="work-detail__gallery-group">
+          <h2 class="work-detail__gallery-group-label">{group.label}</h2>
+          <div class="work-detail__gallery">
+            {group.images.map((src) => (
+              <button type="button" class="work-detail__gallery-item js-lightbox-open" data-src={src}>
+                <img src={src} alt={`${title} ${group.label}`} loading="lazy" />
+              </button>
+            ))}
+          </div>
+        </section>
+      ))
+    ) : (
+      <div class="work-detail__gallery work-detail__gallery--standalone">
+        {gallery.map((src) => (
+          <button type="button" class="work-detail__gallery-item js-lightbox-open" data-src={src}>
+            <img src={src} alt={title} loading="lazy" />
+          </button>
+        ))}
+      </div>
+    )}
 
     <div class="lightbox js-lightbox" hidden>
       <button type="button" class="lightbox__close js-lightbox-close" aria-label="閉じる">×</button>
@@ -170,6 +189,24 @@ const { Content } = await render(work);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+  }
+
+  .work-detail__gallery-group {
+    margin-bottom: clamp(2rem, 5vw, 3.5rem);
+  }
+
+  .work-detail__gallery-group-label {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    margin: 0 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .work-detail__gallery--standalone {
     margin-bottom: clamp(2rem, 5vw, 3.5rem);
   }
 

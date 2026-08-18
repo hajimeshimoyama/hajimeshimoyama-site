@@ -16,6 +16,10 @@ const works = defineCollection({
     // public/images 配下への相対パス（Phase 2で実素材に差し替え）
     coverImage: z.string(),
     images: z.array(z.string()).default([]),
+    // 階数などでギャラリーを見出し付きグループに分けたい場合に使う。指定時は images より優先。
+    imageGroups: z
+      .array(z.object({ label: z.string(), images: z.array(z.string()) }))
+      .optional(),
     // public/videos 配下への相対パス
     video: z.string().optional(),
     // Phase 4 で旧サイトの自動生成URL（例: /z）から新URLへ301リダイレクトするための対応表に使う
