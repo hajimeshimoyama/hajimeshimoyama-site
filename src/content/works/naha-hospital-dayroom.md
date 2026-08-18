@@ -43,5 +43,5 @@ video: /videos/works/naha-hospital-dayroom/video.mp4
 
 環境芸術学会第26回大会にて「曲面ダイクロイックミラーを活用した空間デザインの研究－那覇市民病院デイルームの事例－」として口頭発表。
 
-画像：©KENKATO Hajime Shimoyama  
+画像：©KENKATO（曇天）、Hajime Shimoyama（晴天）  
 アートプロデュース：(株)アートココ
