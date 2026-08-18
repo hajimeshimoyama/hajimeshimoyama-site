@@ -3,13 +3,15 @@ title: ユリイカの刻
 titleEn: The eureka moment
 year: 2023
 category: exhibition
-venue: 東京都 オリエアート・ギャラリー
+venue: "東京都 オリエアート・ギャラリー\nパース画像・モデル制作：水岸藝術文化研發有限公司"
 period: 環境芸術学会第23回大会 作品発表展（2023年12月5日〜15日）
 materials: ABS、アクリルケースなど
 size: H1010×W500×D500程度
-coverImage: /images/placeholder/eureka-1.svg
+coverImage: /images/works/eureka-moment/cover.jpg
 images:
-  - /images/placeholder/eureka-1.svg
+  - /images/works/eureka-moment/03.jpg
+  - /images/works/eureka-moment/02.jpg
+  - /images/works/eureka-moment/01.jpg
 ---
 
 台湾に新築された研究施設のエントランスホール吹き抜けへのパブリックアートの提案。神戸ビエンナーレ2009にPioRyoとして出展した「[輪音の森](/works/soundscape-harmony-kobe)」の発展としてデザイン。多岐に渡る研究や多様な視点、また、数えきれない程の挑戦など、科学技術研究の長い歴史と研究者の弛まぬ努力の積み重なりを、上部に伸びる光の層で表現。描き絶えることのない研究の灯（ともしび）として研究者たちの道標となり、まだ見ぬ豊かな未来を想像する希望の光になることを願ってデザイン・提案。
