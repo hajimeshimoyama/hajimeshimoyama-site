@@ -11,7 +11,7 @@ export async function getStaticPaths() {
 }
 
 const { work } = Astro.props;
-const { title, titleEn, year, venue, period, materials, size, images, imageGroups, coverImage, video, credit } = work.data;
+const { title, titleEn, year, venue, period, materials, size, images, imageGroups, coverImage, video, credit, motifImages } = work.data;
 const gallery = imageGroups
   ? imageGroups.flatMap((g) => g.images)
   : images.length > 0
@@ -49,6 +49,14 @@ const { Content } = await render(work);
           <button type="button" class="work-detail__gallery-item js-lightbox-open" data-src={src}>
             <img src={src} alt={title} loading="lazy" />
           </button>
+        ))}
+      </div>
+    )}
+
+    {motifImages && motifImages.length > 0 && (
+      <div class="work-detail__motifs">
+        {motifImages.map((src) => (
+          <img src={src} alt={`${title} モチーフ`} loading="lazy" />
         ))}
       </div>
     )}
@@ -210,6 +218,20 @@ const { Content } = await render(work);
 
   .work-detail__gallery--standalone {
     margin-bottom: clamp(2rem, 5vw, 3.5rem);
+  }
+
+  .work-detail__motifs {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0 0 clamp(2rem, 5vw, 3.5rem);
+  }
+
+  .work-detail__motifs img {
+    display: block;
+    width: 6rem;
+    height: 6rem;
+    object-fit: contain;
   }
 
   .work-detail__gallery-item {

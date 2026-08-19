@@ -22,6 +22,8 @@ const works = defineCollection({
       .optional(),
     // public/videos 配下への相対パス
     video: z.string().optional(),
+    // キャラクター等のモチーフ参考画像。メインギャラリーより小さく、拡大なしで表示。
+    motifImages: z.array(z.string()).optional(),
     // 撮影者・アートプロデュース等の第三者クレジット。本文と区別しmutedスタイルで表示。
     credit: z.string().optional(),
     // Phase 4 で旧サイトの自動生成URL（例: /z）から新URLへ301リダイレクトするための対応表に使う
