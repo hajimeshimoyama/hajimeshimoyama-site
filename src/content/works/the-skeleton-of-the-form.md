@@ -9,8 +9,8 @@ size: W18×H30×D18cm
 coverImage: /images/works/the-skeleton-of-the-form/cover.jpg
 images:
   - /images/works/the-skeleton-of-the-form/01.jpg
-  - /images/works/the-skeleton-of-the-form/02.jpg
   - /images/works/the-skeleton-of-the-form/03.jpg
+  - /images/works/the-skeleton-of-the-form/02.jpg
 oldPath: /6
 ---
 

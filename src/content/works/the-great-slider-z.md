@@ -3,7 +3,8 @@ title: "無敵ロボ グレートスライダーZ"
 titleEn: "The Great Slider Z"
 year: 2021
 category: exhibition
-venue: "『樋口雄一とアーティストたちのロボット展 ー新しい環境芸術の広がりー』\n東京都\nオリエアート・ギャラリー\n協働：有限会社山﨑製作所"
+venue: "『樋口雄一とアーティストたちのロボット展 ー新しい環境芸術の広がりー』\n東京都\nオリエアート・ギャラリー"
+credit: 協働：有限会社山﨑製作所
 materials: ステンレス磨き仕上、スチールウレタン塗装仕上
 size: W50×D50×H82cm
 coverImage: /images/works/the-great-slider-z/cover.jpg
