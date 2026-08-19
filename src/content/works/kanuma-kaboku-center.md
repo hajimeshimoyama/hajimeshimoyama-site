@@ -2,7 +2,7 @@
 title: 未来芸術　ロボットとAR（拡張現実）
 year: 2025
 category: exhibition
-venue: "栃木県鹿沼市花木センター\n公益財団法人鹿沼市花木センター"
+venue: 栃木県鹿沼市花木センター
 period: 「ルピナス祭り」
 coverImage: /images/works/kanuma-kaboku-center/cover.jpg
 imageGroups:
