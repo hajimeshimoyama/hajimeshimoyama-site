@@ -11,7 +11,7 @@ export async function getStaticPaths() {
 }
 
 const { work } = Astro.props;
-const { title, titleEn, year, venue, period, materials, size, images, imageGroups, coverImage, video, credit, motifImages } = work.data;
+const { title, titleEn, year, venue, period, materials, size, images, imageGroups, coverImage, video, credit, motifImages, motifLabel } = work.data;
 const gallery = imageGroups
   ? imageGroups.flatMap((g) => g.images)
   : images.length > 0
@@ -32,22 +32,28 @@ const { Content } = await render(work);
 
     {imageGroups ? (
       imageGroups.map((group, groupIndex) => (
-        <section class="work-detail__gallery-group">
-          <h2 class="work-detail__gallery-group-label">{group.label}</h2>
-          <div class="work-detail__gallery">
-            {group.images.map((src) => (
-              <button type="button" class="work-detail__gallery-item js-lightbox-open" data-src={src}>
-                <img src={src} alt={`${title} ${group.label}`} loading="lazy" />
-              </button>
-            ))}
-            {groupIndex === 0 && motifImages && motifImages.length > 0 &&
-              motifImages.map((src) => (
-                <div class="work-detail__motif-item">
-                  <img src={src} alt={`${title} モチーフ`} loading="lazy" />
-                </div>
+        <>
+          <section class="work-detail__gallery-group">
+            {group.label && <h2 class="work-detail__gallery-group-label">{group.label}</h2>}
+            <div class="work-detail__gallery" style={group.columns ? `grid-template-columns: repeat(${group.columns}, 1fr);` : undefined}>
+              {group.images.map((src) => (
+                <button type="button" class="work-detail__gallery-item js-lightbox-open" data-src={src}>
+                  <img src={src} alt={`${title} ${group.label}`} loading="lazy" />
+                </button>
               ))}
-          </div>
-        </section>
+            </div>
+          </section>
+          {groupIndex === 1 && motifImages && motifImages.length > 0 && (
+            <section class="work-detail__gallery-group">
+              {motifLabel && <h2 class="work-detail__gallery-group-label">{motifLabel}</h2>}
+              <div class="work-detail__motifs">
+                {motifImages.map((src) => (
+                  <img src={src} alt={`${title} モチーフ`} loading="lazy" />
+                ))}
+              </div>
+            </section>
+          )}
+        </>
       ))
     ) : (
       <div class="work-detail__gallery work-detail__gallery--standalone">
@@ -218,14 +224,13 @@ const { Content } = await render(work);
     margin-bottom: clamp(2rem, 5vw, 3.5rem);
   }
 
-  .work-detail__motif-item {
+  .work-detail__motifs {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
-  .work-detail__motif-item img {
+  .work-detail__motifs img {
     display: block;
     width: 12rem;
     height: 12rem;

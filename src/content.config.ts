@@ -18,12 +18,20 @@ const works = defineCollection({
     images: z.array(z.string()).default([]),
     // 階数などでギャラリーを見出し付きグループに分けたい場合に使う。指定時は images より優先。
     imageGroups: z
-      .array(z.object({ label: z.string(), images: z.array(z.string()) }))
+      .array(
+        z.object({
+          label: z.string(),
+          images: z.array(z.string()),
+          // グリッドの列数。省略時は2列。
+          columns: z.number().optional(),
+        })
+      )
       .optional(),
     // public/videos 配下への相対パス
     video: z.string().optional(),
-    // キャラクター等のモチーフ参考画像。メインギャラリーより小さく、拡大なしで表示。
+    // キャラクター等のモチーフ参考画像。メインギャラリーより小さい見出し付きセクションで表示。
     motifImages: z.array(z.string()).optional(),
+    motifLabel: z.string().optional(),
     // 撮影者・アートプロデュース等の第三者クレジット。本文と区別しmutedスタイルで表示。
     credit: z.string().optional(),
     // Phase 4 で旧サイトの自動生成URL（例: /z）から新URLへ301リダイレクトするための対応表に使う
