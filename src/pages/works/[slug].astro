@@ -31,7 +31,7 @@ const { Content } = await render(work);
     </header>
 
     {imageGroups ? (
-      imageGroups.map((group) => (
+      imageGroups.map((group, groupIndex) => (
         <section class="work-detail__gallery-group">
           <h2 class="work-detail__gallery-group-label">{group.label}</h2>
           <div class="work-detail__gallery">
@@ -40,6 +40,12 @@ const { Content } = await render(work);
                 <img src={src} alt={`${title} ${group.label}`} loading="lazy" />
               </button>
             ))}
+            {groupIndex === 0 && motifImages && motifImages.length > 0 &&
+              motifImages.map((src) => (
+                <div class="work-detail__motif-item">
+                  <img src={src} alt={`${title} モチーフ`} loading="lazy" />
+                </div>
+              ))}
           </div>
         </section>
       ))
@@ -49,14 +55,6 @@ const { Content } = await render(work);
           <button type="button" class="work-detail__gallery-item js-lightbox-open" data-src={src}>
             <img src={src} alt={title} loading="lazy" />
           </button>
-        ))}
-      </div>
-    )}
-
-    {motifImages && motifImages.length > 0 && (
-      <div class="work-detail__motifs">
-        {motifImages.map((src) => (
-          <img src={src} alt={`${title} モチーフ`} loading="lazy" />
         ))}
       </div>
     )}
@@ -220,17 +218,17 @@ const { Content } = await render(work);
     margin-bottom: clamp(2rem, 5vw, 3.5rem);
   }
 
-  .work-detail__motifs {
+  .work-detail__motif-item {
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 1.5rem;
-    margin: 0 0 clamp(2rem, 5vw, 3.5rem);
+    gap: 1rem;
   }
 
-  .work-detail__motifs img {
+  .work-detail__motif-item img {
     display: block;
-    width: 6rem;
-    height: 6rem;
+    width: 12rem;
+    height: 12rem;
     object-fit: contain;
   }
 
