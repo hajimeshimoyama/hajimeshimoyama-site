@@ -1,5 +1,5 @@
 ---
-title: 未来芸術　ロボットとAR（拡張現実）
+title: 未来芸術　ロボットとAR(拡張現実)
 year: 2025
 category: exhibition
 venue: 栃木県鹿沼市花木センター
