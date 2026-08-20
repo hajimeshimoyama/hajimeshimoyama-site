@@ -12,6 +12,7 @@ images:
   - /images/works/the-tree-of-wosh/03.jpg
   - /images/works/the-tree-of-wosh/04.jpg
   - /images/works/the-tree-of-wosh/05.jpg
+  - /images/works/the-tree-of-wosh/06.jpg
 oldPath: /2
 ---
 
