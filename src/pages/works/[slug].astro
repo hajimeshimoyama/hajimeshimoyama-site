@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getImageDimensions } from '../../lib/imageSize';
 
 export async function getStaticPaths() {
   const works = await getCollection('works');
@@ -43,11 +44,14 @@ const description = plainBody.length > 110 ? `${plainBody.slice(0, 110)}…` : p
           <section class="work-detail__gallery-group">
             {group.label && <h2 class="work-detail__gallery-group-label">{group.label}</h2>}
             <div class="work-detail__gallery" style={group.columns ? `grid-template-columns: repeat(${group.columns}, 1fr);` : undefined}>
-              {group.images.map((src) => (
-                <button type="button" class="work-detail__gallery-item js-lightbox-open" data-src={src}>
-                  <img src={src} alt={`${title} ${group.label}`} loading="lazy" />
-                </button>
-              ))}
+              {group.images.map((src) => {
+                const { width, height } = getImageDimensions(src);
+                return (
+                  <button type="button" class="work-detail__gallery-item js-lightbox-open" data-src={src}>
+                    <img src={src} alt={`${title} ${group.label}`} width={width} height={height} loading="lazy" />
+                  </button>
+                );
+              })}
             </div>
           </section>
           {groupIndex === 1 && motifImages && motifImages.length > 0 && (
@@ -64,11 +68,14 @@ const description = plainBody.length > 110 ? `${plainBody.slice(0, 110)}…` : p
       ))
     ) : (
       <div class="work-detail__gallery work-detail__gallery--standalone">
-        {gallery.map((src) => (
-          <button type="button" class="work-detail__gallery-item js-lightbox-open" data-src={src}>
-            <img src={src} alt={title} loading="lazy" />
-          </button>
-        ))}
+        {gallery.map((src) => {
+          const { width, height } = getImageDimensions(src);
+          return (
+            <button type="button" class="work-detail__gallery-item js-lightbox-open" data-src={src}>
+              <img src={src} alt={title} width={width} height={height} loading="lazy" />
+            </button>
+          );
+        })}
       </div>
     )}
 
