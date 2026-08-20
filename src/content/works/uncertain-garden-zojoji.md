@@ -2,7 +2,7 @@
 title: "不確かな庭－増上寺－"
 titleEn: "Uncertain Garden－Zojoji－"
 year: 2019
-category: permanent
+category: exhibition
 venue: "環境芸術学会 第20回大会（増上寺 東京都）"
 coverImage: /images/works/uncertain-garden-zojoji/cover.jpg
 images:

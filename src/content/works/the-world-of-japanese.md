@@ -2,7 +2,7 @@
 title: "イロハノセカイ"
 titleEn: "The World of Japanese"
 year: 2010
-category: permanent
+category: exhibition
 venue: "World  Space Creators Awards 2010\nプロフェッショナル部門ショップヴィジュアル賞"
 coverImage: /images/works/the-world-of-japanese/cover.jpg
 images:

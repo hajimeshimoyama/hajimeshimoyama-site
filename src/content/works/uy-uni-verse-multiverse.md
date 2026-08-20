@@ -2,7 +2,7 @@
 title: "ウユニバース‒離島の多元宇宙‒"
 titleEn: "Uy-uni-verse ≒ Multiverse"
 year: 2014
-category: permanent
+category: exhibition
 venue: "種子島宇宙芸術際プレイベント2014\nミッションin Tanegashima\n鹿児島県\n宇宙芸術研究部会"
 coverImage: /images/works/uy-uni-verse-multiverse/cover.jpg
 images:
