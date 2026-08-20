@@ -2,6 +2,7 @@
 title: "思いの木"
 titleEn: "The Tree of Wosh"
 year: 2014
+yearDisplay: "2014−2024"
 category: permanent
 venue: 兵庫県
 period: "2014−2024"

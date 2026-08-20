@@ -23,7 +23,7 @@ const works = allWorks.sort((a, b) => {
       <WorkCard
         slug={work.id}
         title={work.data.title}
-        year={work.data.year}
+        year={work.data.yearDisplay ?? work.data.year}
         coverImage={work.data.coverImage}
         category={work.data.category}
       />

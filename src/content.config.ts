@@ -7,6 +7,9 @@ const works = defineCollection({
     title: z.string(),
     titleEn: z.string().optional(),
     year: z.number(),
+    // トップページのカードに表示する年表記を上書きしたい場合（例: "2014−2024"のような期間表記）。
+    // 並び替えには使わず、year（数値）がソート基準のまま。
+    yearDisplay: z.string().optional(),
     // 恒久設置 or 会期限定の学会作品発表展など。表示上は区別しないが、データとしては保持する。
     category: z.enum(['permanent', 'exhibition']),
     venue: z.string().optional(),
