@@ -5,9 +5,19 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
+  image?: string;
+  type?: 'website' | 'article';
 }
 
-const { title, description = 'Hajime Shimoyama — Art and Design' } = Astro.props;
+const {
+  title,
+  description = 'Hajime Shimoyama — Art and Design',
+  image = '/favicon.jpg',
+  type = 'website',
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL(image, Astro.site);
 ---
 
 <!doctype html>
@@ -18,7 +28,21 @@ const { title, description = 'Hajime Shimoyama — Art and Design' } = Astro.pro
     <link rel="icon" type="image/jpeg" href="/favicon.jpg" />
     <link rel="apple-touch-icon" href="/favicon.jpg" />
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
     <title>{title}</title>
+
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:site_name" content="Hajime Shimoyama" />
+    <meta property="og:locale" content="ja_JP" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageURL} />
   </head>
   <body>
     <Header />

@@ -2,8 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Contact — Hajime Shimoyama">
+<BaseLayout title="Contact — Hajime Shimoyama" description="Hajime Shimoyama へのお問い合わせ">
   <div class="wrap contact">
+    <h1 class="visually-hidden">Contact — Hajime Shimoyama</h1>
     <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact__form">
       <input type="hidden" name="form-name" value="contact" />
       <p class="contact__honeypot"><label>Don't fill this out: <input name="bot-field" /></label></p>
