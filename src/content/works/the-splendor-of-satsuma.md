@@ -2,7 +2,7 @@
 title: "薩光輝"
 titleEn: "The splendor of Satsuma"
 year: 2021
-category: permanent
+category: exhibition
 venue: "第22回環境芸術学会大会 作品発表\n東京都"
 materials: "〈照明装置部〉MDF外側ホワイト内側黒塗装仕上、シンクロナスモータ／〈反射部〉薩摩切子技法による特殊発色およびカッティング仕上／〈取付金物〉ステンレスホワイト塗装仕上"
 size: "〈作品全体〉W90×H230×D35cm／〈照明装置部〉W20×H37×D16cm／〈反射部〉W8×H4×D9cm×3個"

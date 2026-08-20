@@ -2,7 +2,7 @@
 title: "無限の花"
 titleEn: "An Endless Flower"
 year: 2019
-category: permanent
+category: exhibition
 venue: "第16回KAJIMA彫刻コンクール 模型入選作品"
 coverImage: /images/works/an-endless-flower/cover.jpg
 images:

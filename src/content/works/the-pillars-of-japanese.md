@@ -2,7 +2,7 @@
 title: "コトバノハシラ-ナカキヨ-"
 titleEn: "The Pillars of Japanese"
 year: 2010
-category: permanent
+category: exhibition
 venue: "日立シビックセンター　茨城県"
 materials: 合成紙など
 size: W420×H110×D420cm

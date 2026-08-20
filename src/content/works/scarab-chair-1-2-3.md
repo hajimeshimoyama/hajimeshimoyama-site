@@ -2,7 +2,7 @@
 title: "スカラベチェア"
 titleEn: "Scarab chair 1,2,3"
 year: 2002
-category: permanent
+category: exhibition
 materials: 積層合板18mmレーザーカットWax仕上
 size: "イス／W45×H89(SH40)×D52cm、スクリーン／W91×H91×D18cm"
 coverImage: /images/works/scarab-chair-1-2-3/cover.jpg
