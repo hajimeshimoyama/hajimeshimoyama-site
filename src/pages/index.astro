@@ -30,23 +30,23 @@ const works = allWorks.sort((a, b) => {
       />
     ))}
   </div>
-</BaseLayout>
 
-<script>
-  const filterButtons = document.querySelectorAll<HTMLButtonElement>('.js-filter');
-  const cards = document.querySelectorAll<HTMLAnchorElement>('.js-work-card');
+  <script>
+    const filterButtons = document.querySelectorAll<HTMLButtonElement>('.js-filter');
+    const cards = document.querySelectorAll<HTMLAnchorElement>('.js-work-card');
 
-  filterButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const filter = btn.dataset.filter;
-      filterButtons.forEach((b) => b.classList.toggle('is-active', b === btn));
-      cards.forEach((card) => {
-        const match = filter === 'all' || card.dataset.category === filter;
-        card.hidden = !match;
+    filterButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        filterButtons.forEach((b) => b.classList.toggle('is-active', b === btn));
+        cards.forEach((card) => {
+          const match = filter === 'all' || card.dataset.category === filter;
+          card.hidden = !match;
+        });
       });
     });
-  });
-</script>
+  </script>
+</BaseLayout>
 
 <style>
   .works-filter {

@@ -135,9 +135,8 @@ const description = facilityTag ? `【${facilityTag}】${bodyExcerpt}` : bodyExc
 
     <a href="/" class="work-detail__back">↑ Back to Top</a>
   </article>
-</BaseLayout>
 
-<script>
+  <script>
   const lightbox = document.querySelector<HTMLDivElement>('.js-lightbox');
   const lightboxImage = document.querySelector<HTMLImageElement>('.js-lightbox-image');
   const openers = document.querySelectorAll<HTMLButtonElement>('.js-lightbox-open');
@@ -189,7 +188,8 @@ const description = facilityTag ? `【${facilityTag}】${bodyExcerpt}` : bodyExc
     if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
     if (e.key === 'ArrowRight') showImage(currentIndex + 1);
   });
-</script>
+  </script>
+</BaseLayout>
 
 <style>
   .work-detail {
