@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 }
 
 const { work } = Astro.props;
-const { title, titleEn, year, category, venue, period, materials, size, images, imageGroups, coverImage, video, videoPoster, credit, motifImages, motifLabel } = work.data;
+const { title, titleEn, year, yearDisplay, category, venue, period, materials, size, images, imageGroups, coverImage, video, videoPoster, credit, motifImages, motifLabel } = work.data;
 const facilityTag = getFacilityTag(category, title);
 const gallery = imageGroups
   ? imageGroups.flatMap((g) => g.images)
@@ -42,7 +42,7 @@ const description = facilityTag ? `【${facilityTag}】${bodyExcerpt}` : bodyExc
       {facilityTag && <p class="work-detail__meta">{facilityTag}</p>}
       {venue && <p class="work-detail__meta">{venue}</p>}
       {period && <p class="work-detail__meta">{period}</p>}
-      <p class="work-detail__year">{year}</p>
+      <p class="work-detail__year">{yearDisplay ?? year}</p>
     </header>
 
     {imageGroups ? (
