@@ -24,6 +24,10 @@ const { slug, title, year, coverImage, category } = Astro.props;
     text-align: center;
   }
 
+  .work-card[hidden] {
+    display: none;
+  }
+
   .work-card__image {
     aspect-ratio: 4 / 5;
     overflow: hidden;
