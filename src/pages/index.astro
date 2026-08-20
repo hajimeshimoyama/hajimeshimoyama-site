@@ -33,14 +33,15 @@ const works = allWorks.sort((a, b) => {
   <script>
     const workNavLink = document.querySelector<HTMLAnchorElement>('.js-work-nav');
     const filterPanel = document.querySelector<HTMLDivElement>('.js-work-filter-panel');
+    const filterButtons = document.querySelectorAll<HTMLButtonElement>('.js-filter');
+    const cards = document.querySelectorAll<HTMLAnchorElement>('.js-work-card');
 
     workNavLink?.addEventListener('click', (e) => {
       e.preventDefault();
       if (filterPanel) filterPanel.hidden = !filterPanel.hidden;
+      filterButtons.forEach((b) => b.classList.remove('is-active'));
+      cards.forEach((card) => { card.hidden = false; });
     });
-
-    const filterButtons = document.querySelectorAll<HTMLButtonElement>('.js-filter');
-    const cards = document.querySelectorAll<HTMLAnchorElement>('.js-work-card');
 
     filterButtons.forEach((btn) => {
       btn.addEventListener('click', () => {
