@@ -11,6 +11,7 @@ images:
   - /images/works/soundscape-harmony-kobe/01.jpg
   - /images/works/soundscape-harmony-kobe/02.jpg
 video: /videos/works/soundscape-harmony-kobe/video.mp4
+videoPoster: /images/works/soundscape-harmony-kobe/video-poster.jpg
 oldPath: /8
 credit: Photo：長谷川 智紀
 ---

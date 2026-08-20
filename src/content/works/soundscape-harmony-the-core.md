@@ -10,6 +10,7 @@ coverImage: /images/works/soundscape-harmony-the-core/cover.jpg
 images:
   - /images/works/soundscape-harmony-the-core/01.jpg
 video: /videos/works/soundscape-harmony-the-core/video.mp4
+videoPoster: /images/works/soundscape-harmony-the-core/video-poster.jpg
 oldPath: /9
 ---
 

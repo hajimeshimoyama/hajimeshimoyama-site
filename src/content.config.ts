@@ -29,6 +29,9 @@ const works = defineCollection({
       .optional(),
     // public/videos 配下への相対パス
     video: z.string().optional(),
+    // 動画のposter画像。動画自体のアスペクト比に合わせた実フレームを指定する（未指定時はcoverImageを使うが、
+    // coverImageは4:5トリミングのため動画本来の比率と異なり、再生開始時にサイズが変わって見える点に注意）。
+    videoPoster: z.string().optional(),
     // キャラクター等のモチーフ参考画像。メインギャラリーより小さい見出し付きセクションで表示。
     motifImages: z.array(z.string()).optional(),
     motifLabel: z.string().optional(),

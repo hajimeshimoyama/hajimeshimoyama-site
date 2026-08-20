@@ -12,6 +12,7 @@ images:
   - /images/works/object-s/02.jpg
   - /images/works/object-s/03.jpg
 video: /videos/works/object-s/video.mp4
+videoPoster: /images/works/object-s/video-poster.jpg
 oldPath: /yskw-project-object-s
 ---
 

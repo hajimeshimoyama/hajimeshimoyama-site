@@ -37,6 +37,7 @@ imageGroups:
       - /images/works/naha-hospital-dayroom/02.jpg
       - /images/works/naha-hospital-dayroom/03.jpg
 video: /videos/works/naha-hospital-dayroom/video.mp4
+videoPoster: /images/works/naha-hospital-dayroom/video-poster.jpg
 credit: "画像：©KENKATO（曇天）、Hajime Shimoyama（晴天）\nアートプロデュース：(株)アートココ"
 ---
 

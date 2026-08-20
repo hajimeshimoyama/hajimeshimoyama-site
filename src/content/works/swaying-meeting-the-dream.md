@@ -10,6 +10,7 @@ coverImage: /images/works/swaying-meeting-the-dream/cover.jpg
 images:
   - /images/works/swaying-meeting-the-dream/01.jpg
 video: /videos/works/swaying-meeting-the-dream/video.mp4
+videoPoster: /images/works/swaying-meeting-the-dream/video-poster.jpg
 oldPath: /12
 ---
 

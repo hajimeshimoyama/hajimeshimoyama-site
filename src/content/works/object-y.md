@@ -12,6 +12,7 @@ images:
   - /images/works/object-y/02.jpg
   - /images/works/object-y/03.jpg
 video: /videos/works/object-y/video.mp4
+videoPoster: /images/works/object-y/video-poster.jpg
 oldPath: /yskw-project-relief-y
 ---
 

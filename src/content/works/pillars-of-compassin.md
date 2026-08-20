@@ -10,6 +10,7 @@ coverImage: /images/works/pillars-of-compassin/cover.jpg
 images:
   - /images/works/pillars-of-compassin/01.jpg
 video: /videos/works/pillars-of-compassin/video.mp4
+videoPoster: /images/works/pillars-of-compassin/video-poster.jpg
 oldPath: /11
 ---
 

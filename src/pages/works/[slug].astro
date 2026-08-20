@@ -12,13 +12,16 @@ export async function getStaticPaths() {
 }
 
 const { work } = Astro.props;
-const { title, titleEn, year, venue, period, materials, size, images, imageGroups, coverImage, video, credit, motifImages, motifLabel } = work.data;
+const { title, titleEn, year, venue, period, materials, size, images, imageGroups, coverImage, video, videoPoster, credit, motifImages, motifLabel } = work.data;
 const gallery = imageGroups
   ? imageGroups.flatMap((g) => g.images)
   : images.length > 0
     ? images
     : [coverImage];
 const { Content } = await render(work);
+
+const poster = videoPoster ?? coverImage;
+const posterDims = video ? getImageDimensions(poster) : null;
 
 const plainBody = (work.body ?? '')
   .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
@@ -92,7 +95,14 @@ const description = plainBody.length > 110 ? `${plainBody.slice(0, 110)}…` : p
 
     {video && (
       <div class="work-detail__video">
-        <video src={video} controls playsinline preload="metadata" poster={coverImage}></video>
+        <video
+          src={video}
+          controls
+          playsinline
+          preload="metadata"
+          poster={poster}
+          style={posterDims ? `aspect-ratio: ${posterDims.width} / ${posterDims.height};` : undefined}
+        ></video>
       </div>
     )}
 
@@ -341,6 +351,8 @@ const description = plainBody.length > 110 ? `${plainBody.slice(0, 110)}…` : p
   .work-detail__video video {
     display: block;
     width: 100%;
+    height: auto;
+    object-fit: cover;
     background: var(--color-border);
   }
 

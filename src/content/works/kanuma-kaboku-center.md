@@ -24,6 +24,7 @@ imageGroups:
       - /images/works/kanuma-kaboku-center/07.jpg
       - /images/works/kanuma-kaboku-center/06.jpg
 video: /videos/works/kanuma-kaboku-center/video.mp4
+videoPoster: /images/works/kanuma-kaboku-center/video-poster.jpg
 motifImages:
   - /images/works/kanuma-kaboku-center/motif-01.jpg
   - /images/works/kanuma-kaboku-center/motif-02.jpg
