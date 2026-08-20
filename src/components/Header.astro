@@ -11,7 +11,7 @@ const nav = [
     <a href="/" class="site-header__brand">Hajime Shimoyama <span>— Art and Design</span></a>
     <nav class="site-header__nav">
       {nav.map((item) => (
-        <a href={item.href}>{item.label}</a>
+        <a href={item.href} class={item.href === '/' ? 'js-work-nav' : undefined}>{item.label}</a>
       ))}
     </nav>
   </div>

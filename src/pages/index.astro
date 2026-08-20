@@ -14,7 +14,7 @@ const works = allWorks.sort((a, b) => {
 
 <BaseLayout title="Hajime Shimoyama — Art and Design">
   <h1 class="visually-hidden">Hajime Shimoyama — Art and Design</h1>
-  <div class="wrap works-filter">
+  <div class="wrap works-filter js-work-filter-panel" hidden>
     <button type="button" class="js-filter is-active" data-filter="all">すべて</button>
     <button type="button" class="js-filter" data-filter="permanent">恒久設置</button>
     <button type="button" class="js-filter" data-filter="exhibition">展示発表</button>
@@ -32,6 +32,14 @@ const works = allWorks.sort((a, b) => {
   </div>
 
   <script>
+    const workNavLink = document.querySelector<HTMLAnchorElement>('.js-work-nav');
+    const filterPanel = document.querySelector<HTMLDivElement>('.js-work-filter-panel');
+
+    workNavLink?.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (filterPanel) filterPanel.hidden = !filterPanel.hidden;
+    });
+
     const filterButtons = document.querySelectorAll<HTMLButtonElement>('.js-filter');
     const cards = document.querySelectorAll<HTMLAnchorElement>('.js-work-card');
 
@@ -55,6 +63,10 @@ const works = allWorks.sort((a, b) => {
     flex-wrap: wrap;
     gap: 0 clamp(0.75rem, 2vw, 1.5rem);
     margin-bottom: clamp(1.5rem, 4vw, 2rem);
+  }
+
+  .works-filter[hidden] {
+    display: none;
   }
 
   .works-filter button {
