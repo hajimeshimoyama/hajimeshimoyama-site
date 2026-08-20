@@ -2,9 +2,10 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Contact — Hajime Shimoyama" description="Hajime Shimoyama へのお問い合わせ">
+<BaseLayout title="Contact — Hajime Shimoyama" description="パブリックアート・空間デザインのご相談、制作のご依頼はこちらから。Hajime Shimoyama へのお問い合わせ窓口です。">
   <div class="wrap contact">
     <h1 class="visually-hidden">Contact — Hajime Shimoyama</h1>
+    <p class="contact__intro">パブリックアート・空間デザインのご相談、制作のご依頼はこちらから承ります。</p>
     <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact__form">
       <input type="hidden" name="form-name" value="contact" />
       <p class="contact__honeypot"><label>Don't fill this out: <input name="bot-field" /></label></p>
@@ -35,6 +36,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .contact {
     max-width: 32rem;
     padding-block: clamp(1rem, 4vw, 2rem) clamp(3rem, 8vw, 6rem);
+  }
+
+  .contact__intro {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.9;
+    margin: 0 0 clamp(2rem, 5vw, 3rem);
   }
 
   .contact__honeypot {

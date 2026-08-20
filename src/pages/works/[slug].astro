@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getImageDimensions } from '../../lib/imageSize';
+import { getFacilityTag } from '../../lib/facilityTag';
 
 export async function getStaticPaths() {
   const works = await getCollection('works');
@@ -12,7 +13,8 @@ export async function getStaticPaths() {
 }
 
 const { work } = Astro.props;
-const { title, titleEn, year, venue, period, materials, size, images, imageGroups, coverImage, video, videoPoster, credit, motifImages, motifLabel } = work.data;
+const { title, titleEn, year, category, venue, period, materials, size, images, imageGroups, coverImage, video, videoPoster, credit, motifImages, motifLabel } = work.data;
+const facilityTag = getFacilityTag(category, title);
 const gallery = imageGroups
   ? imageGroups.flatMap((g) => g.images)
   : images.length > 0
@@ -28,7 +30,8 @@ const plainBody = (work.body ?? '')
   .replace(/[#*_`]/g, '')
   .replace(/\s+/g, ' ')
   .trim();
-const description = plainBody.length > 110 ? `${plainBody.slice(0, 110)}…` : plainBody || `${title}（${year}）`;
+const bodyExcerpt = plainBody.length > 110 ? `${plainBody.slice(0, 110)}…` : plainBody || `${title}（${year}）`;
+const description = facilityTag ? `【${facilityTag}】${bodyExcerpt}` : bodyExcerpt;
 ---
 
 <BaseLayout title={`${title} — Hajime Shimoyama`} description={description} image={coverImage} type="article">
@@ -36,6 +39,7 @@ const description = plainBody.length > 110 ? `${plainBody.slice(0, 110)}…` : p
     <header class="work-detail__header">
       <h1>{title}</h1>
       {titleEn && <p class="work-detail__title-en">{titleEn}</p>}
+      {facilityTag && <p class="work-detail__meta">{facilityTag}</p>}
       {venue && <p class="work-detail__meta">{venue}</p>}
       {period && <p class="work-detail__meta">{period}</p>}
       <p class="work-detail__year">{year}</p>
