@@ -4,6 +4,7 @@ titleEn: "The Tree of Wosh"
 year: 2014
 category: permanent
 venue: 兵庫県
+period: "2014−2024"
 coverImage: /images/works/the-tree-of-wosh/cover.jpg
 images:
   - /images/works/the-tree-of-wosh/01.jpg

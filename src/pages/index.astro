@@ -15,7 +15,6 @@ const works = allWorks.sort((a, b) => {
 <BaseLayout title="Hajime Shimoyama — Art and Design">
   <h1 class="visually-hidden">Hajime Shimoyama — Art and Design</h1>
   <div class="wrap works-filter js-work-filter-panel" hidden>
-    <button type="button" class="js-filter is-active" data-filter="all">すべて</button>
     <button type="button" class="js-filter" data-filter="permanent">恒久設置</button>
     <button type="button" class="js-filter" data-filter="exhibition">展示発表</button>
   </div>
@@ -45,11 +44,16 @@ const works = allWorks.sort((a, b) => {
 
     filterButtons.forEach((btn) => {
       btn.addEventListener('click', () => {
+        const alreadyActive = btn.classList.contains('is-active');
+        filterButtons.forEach((b) => b.classList.remove('is-active'));
+        if (alreadyActive) {
+          cards.forEach((card) => { card.hidden = false; });
+          return;
+        }
+        btn.classList.add('is-active');
         const filter = btn.dataset.filter;
-        filterButtons.forEach((b) => b.classList.toggle('is-active', b === btn));
         cards.forEach((card) => {
-          const match = filter === 'all' || card.dataset.category === filter;
-          card.hidden = !match;
+          card.hidden = card.dataset.category !== filter;
         });
       });
     });
