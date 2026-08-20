@@ -14,6 +14,11 @@ const works = allWorks.sort((a, b) => {
 
 <BaseLayout title="Hajime Shimoyama — Art and Design">
   <h1 class="visually-hidden">Hajime Shimoyama — Art and Design</h1>
+  <div class="wrap works-filter">
+    <button type="button" class="js-filter is-active" data-filter="all">すべて</button>
+    <button type="button" class="js-filter" data-filter="permanent">恒久設置</button>
+    <button type="button" class="js-filter" data-filter="exhibition">展示・作品発表</button>
+  </div>
   <div class="wrap works-grid">
     {works.map((work) => (
       <WorkCard
@@ -21,12 +26,59 @@ const works = allWorks.sort((a, b) => {
         title={work.data.title}
         year={work.data.year}
         coverImage={work.data.coverImage}
+        category={work.data.category}
       />
     ))}
   </div>
 </BaseLayout>
 
+<script>
+  const filterButtons = document.querySelectorAll<HTMLButtonElement>('.js-filter');
+  const cards = document.querySelectorAll<HTMLAnchorElement>('.js-work-card');
+
+  filterButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+      filterButtons.forEach((b) => b.classList.toggle('is-active', b === btn));
+      cards.forEach((card) => {
+        const match = filter === 'all' || card.dataset.category === filter;
+        card.hidden = !match;
+      });
+    });
+  });
+</script>
+
 <style>
+  .works-filter {
+    display: flex;
+    justify-content: center;
+    gap: clamp(1.25rem, 3vw, 2rem);
+    padding-bottom: clamp(2rem, 5vw, 3rem);
+  }
+
+  .works-filter button {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+
+  .works-filter button:hover,
+  .works-filter button:focus-visible {
+    color: var(--color-text);
+  }
+
+  .works-filter button.is-active {
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-text);
+  }
+
   .works-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

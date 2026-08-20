@@ -4,12 +4,13 @@ interface Props {
   title: string;
   year: number;
   coverImage: string;
+  category: string;
 }
 
-const { slug, title, year, coverImage } = Astro.props;
+const { slug, title, year, coverImage, category } = Astro.props;
 ---
 
-<a class="work-card" href={`/works/${slug}`}>
+<a class="work-card js-work-card" href={`/works/${slug}`} data-category={category}>
   <div class="work-card__image">
     <img src={coverImage} alt={title} loading="lazy" />
   </div>
