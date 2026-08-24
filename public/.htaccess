@@ -1,0 +1,61 @@
+# 旧サイト（Adobe Portfolio）のURLから新サイトへの301リダイレクト
+# 生成元: src/content/works/*.md の oldPath フィールド（public/_redirects と同内容、Apache用）
+
+Redirect 301 /5 /works/a-portable-shrine-gumma-mikoshi
+Redirect 301 /18 /works/an-endless-flower
+Redirect 301 /1638ef36c62929 /works/bouncing-water-droplets
+Redirect 301 /160efd1252f383 /works/butterfly-garden-in-the-sun
+Redirect 301 /invalid /works/celosia-cube
+Redirect 301 /3 /works/circles-and-squares-the-image-of-nurture
+Redirect 301 /cosmosuki /works/cosmosuki
+Redirect 301 /1 /works/daruma-cube
+Redirect 301 /k-1 /works/designing-a-entrance-garden-for-the-ltd
+Redirect 301 /n /works/designing-a-relief-for-the-hospital
+Redirect 301 /k /works/designing-an-entrance-relief-for-the-hospital
+Redirect 301 /16 /works/designing-an-outdoor-monument-of-hiroshima-red-cross-nursing-college
+Redirect 301 /15 /works/designing-an-outdoor-sign-monument-of-the-waterworks-bureau
+Redirect 301 /flowers-behind-the-back-of-the-universe /works/flowers-behind-the-back-of-the-universe
+Redirect 301 /10 /works/i-ro-ha-cube
+Redirect 301 /t /works/kagoshima-t-hospital-elevator-hall
+Redirect 301 /2011 /works/mebuki-no-kotoba-kotoba-no-hashira
+Redirect 301 /megumi /works/megumi-sparkle-of-life
+Redirect 301 /yskw-project-object-s /works/object-s
+Redirect 301 /yskw-project-relief-y /works/object-y
+Redirect 301 /11 /works/pillars-of-compassin
+Redirect 301 /yskw-project-relief /works/relief-nami
+Redirect 301 /13 /works/rubins-number
+Redirect 301 /4 /works/s-a-k-u-the-seeds-activate-the-kobe-universe
+Redirect 301 /14 /works/scarab-chair-1-2-3
+Redirect 301 /8 /works/soundscape-harmony-kobe
+Redirect 301 /9 /works/soundscape-harmony-the-core
+Redirect 301 /12 /works/swaying-meeting-the-dream
+Redirect 301 /2021 /works/the-color-of-the-shadow-happy-oceans-flag-2021
+Redirect 301 /z /works/the-great-slider-z
+Redirect 301 /160efcae1d3754 /works/the-other-side-of-the-endless-knot
+Redirect 301 /7 /works/the-pillars-of-japanese
+Redirect 301 /6 /works/the-skeleton-of-the-form
+Redirect 301 /161beedfa7848b /works/the-splendor-of-satsuma
+Redirect 301 /17 /works/the-tree-for-discover
+Redirect 301 /2 /works/the-tree-of-wosh
+Redirect 301 /world-space-creators-awards-2010 /works/the-world-of-japanese
+Redirect 301 /20 /works/to-infinity-and-beyond
+Redirect 301 /1638ef0f858916 /works/toki-no-shizuku
+Redirect 301 /19 /works/uncertain-garden-zojoji
+Redirect 301 /uy-uni-verse-multiverse /works/uy-uni-verse-multiverse
+Redirect 301 /void-cube-2015 /works/void-cube
+Redirect 301 /w /works/w-dental-clinic-lobby-light
+
+ErrorDocument 404 /404.html
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType video/mp4 "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>

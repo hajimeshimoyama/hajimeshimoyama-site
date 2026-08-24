@@ -6,8 +6,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <div class="wrap contact">
     <h1 class="visually-hidden">Contact — Hajime Shimoyama</h1>
     <p class="contact__intro">パブリックアート・空間デザインのご相談、制作のご依頼はこちらから承ります。</p>
-    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact__form">
-      <input type="hidden" name="form-name" value="contact" />
+    <p class="contact__status js-contact-status" hidden></p>
+    <form name="contact" method="POST" action="/contact-handler.php" class="contact__form">
       <p class="contact__honeypot"><label>Don't fill this out: <input name="bot-field" /></label></p>
 
       <label class="contact__field">
@@ -30,6 +30,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     <a href="/" class="contact__back">↑ Back to Top</a>
   </div>
+
+  <script>
+    const statusEl = document.querySelector<HTMLParagraphElement>('.js-contact-status');
+    const status = new URLSearchParams(window.location.search).get('status');
+    const messages: Record<string, string> = {
+      sent: 'お問い合わせを送信しました。ありがとうございます。',
+      invalid: '入力内容をご確認の上、もう一度お試しください。',
+      error: '送信に失敗しました。お手数ですが時間をおいて再度お試しください。',
+    };
+    if (statusEl && status && messages[status]) {
+      statusEl.textContent = messages[status];
+      statusEl.dataset.status = status;
+      statusEl.hidden = false;
+    }
+  </script>
 </BaseLayout>
 
 <style>
@@ -43,6 +58,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     font-size: 0.95rem;
     line-height: 1.9;
     margin: 0 0 clamp(2rem, 5vw, 3rem);
+  }
+
+  .contact__status {
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+    margin: -1rem 0 2rem;
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+  }
+
+  .contact__status[data-status="invalid"],
+  .contact__status[data-status="error"] {
+    border-color: var(--color-text);
   }
 
   .contact__honeypot {
