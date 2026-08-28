@@ -1,43 +1,48 @@
-# Astro Starter Kit: Minimal
+# hajimeshimoyama.com
 
-```sh
-npm create astro@latest -- --template minimal
-```
+下山肇（Hajime Shimoyama）のアーティスト・ポートフォリオサイト。Astroで構築した静的サイト。
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- 公開URL: https://hajimeshimoyama.com/
+- ホスティング: XServer（レンタルサーバー、静的ファイル配信）
+- ドメイン・DNS・メール: XServer
+- ソース管理: GitHub（このリポジトリ）
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+## 構成
 
 ```text
 /
-├── public/
+├── public/                 静的ファイル（画像・動画・.htaccess・contact-handler.php等）
 ├── src/
+│   ├── content/works/       作品データ（frontmatter + 本文、1作品=1.mdファイル）
+│   ├── content.config.ts    作品データのスキーマ定義
+│   ├── components/
+│   ├── layouts/
 │   └── pages/
-│       └── index.astro
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 開発
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```sh
+npm install
+npm run dev       # ローカル確認 (localhost:4321)
+npm run build     # ./dist/ に本番ビルドを生成
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+## 公開の仕組み（Netlifyではない）
 
-## 🧞 Commands
+このサイトはGitHubへのプッシュでは自動的に公開されない。以下の手順で手動アップロードする。
 
-All commands are run from the root of the project, from a terminal:
+1. `npm run build` で `dist/` を生成
+2. `lftp` 等でXServerのFTPへ `dist/` の中身をアップロード（接続先: `hajimeshimoyama.com/public_html`）
+3. 反映を本番サイトで確認
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+過去にNetlifyでホスティングしていたが、無料枠（ビルド回数の上限）を使い切りサイトが完全停止する障害が発生したため、追加費用のかからないXServerでの静的配信に移行した（2026-08-24）。
 
-## 👀 Want to learn more?
+### お問い合わせフォーム
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+`public/contact-handler.php` がフォーム送信を受け取り、PHPの`mail()`で`pio@hajimeshimoyama.com`宛に送信する（Netlify Formsの代替）。
+
+### 旧サイトからのリダイレクト
+
+`public/.htaccess` に、旧Adobe PortfolioのURLから新URLへの301リダイレクトを設定している（各作品の`oldPath`frontmatterから生成）。
