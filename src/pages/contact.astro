@@ -8,6 +8,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <p class="contact__intro">パブリックアート・空間デザインのご相談、制作のご依頼はこちらから承ります。</p>
     <p class="contact__status js-contact-status" hidden></p>
     <form name="contact" method="POST" action="/contact-handler.php" class="contact__form">
+      <input type="hidden" name="loaded-at" class="js-loaded-at" value="" />
       <p class="contact__honeypot"><label>Don't fill this out: <input name="bot-field" /></label></p>
 
       <label class="contact__field">
@@ -32,6 +33,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </div>
 
   <script>
+    const loadedAtEl = document.querySelector<HTMLInputElement>('.js-loaded-at');
+    if (loadedAtEl) loadedAtEl.value = String(Math.floor(Date.now() / 1000));
+
     const statusEl = document.querySelector<HTMLParagraphElement>('.js-contact-status');
     const status = new URLSearchParams(window.location.search).get('status');
     const messages: Record<string, string> = {

@@ -1,3 +1,19 @@
+# HTTPをHTTPSへ強制リダイレクト
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# セキュリティヘッダー
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
+
 # 旧サイト（Adobe Portfolio）のURLから新サイトへの301リダイレクト
 # 生成元: src/content/works/*.md の oldPath フィールド（public/_redirects と同内容、Apache用）
 
