@@ -26,3 +26,4 @@ dist/
 
 # Local Netlify folder
 .netlify
+.secrets/
