@@ -22,9 +22,14 @@ if ($botField !== '') {
     redirectWithStatus('sent');
 }
 
-// フォーム表示から3秒未満での送信はボットとみなし、成功したふりをして終了
-$loadedAt = (int) ($_POST['loaded-at'] ?? 0);
-if ($loadedAt > 0 && (time() - $loadedAt) < 3) {
+// loaded-atが無い・数値でない場合はJSを実行しない機械的な送信とみなし、成功したふりをして終了
+// （フォーム表示から3秒未満での送信も同様にボットとみなす）
+$loadedAtRaw = $_POST['loaded-at'] ?? '';
+if ($loadedAtRaw === '' || !ctype_digit($loadedAtRaw)) {
+    redirectWithStatus('sent');
+}
+$loadedAt = (int) $loadedAtRaw;
+if ((time() - $loadedAt) < 3) {
     redirectWithStatus('sent');
 }
 
